@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Crypto With Shola</title>
+    <meta
+      name="description"
+      content="Contact Crypto With Shola for business inquiries, coaching, media, and support."
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="assets/scroll-motion.js" defer></script>
+  </head>
+  <body>
+    <nav class="site-nav" aria-label="Main">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo"
+          ><img src="assets/shola-portrait.png" alt="" />Crypto With Shola</a
+        >
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="#">Contact</a>
+          <a href="#" class="btn btn-sm btn-primary">Join Telegram</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero" style="padding: 100px 24px 60px">
+      <div class="container section-center">
+        <span class="section-label">Contact</span>
+        <h1>Business inquiries and <em>support.</em></h1>
+        <p class="lead">
+          Reach out for coaching, partnerships, media, or support questions. We
+          respond within 48 hours.
+        </p>
+      </div>
+    </header>
+
+    <section class="section" aria-label="Contact form">
+      <div class="container" style="max-width: 720px">
+        <form
+          onsubmit="
+            event.preventDefault();
+            this.innerHTML =
+              '<div style=\'text-align:center;padding:40px;\'><h3>Message sent</h3><p>We will respond within 48 hours.</p></div>';
+          "
+          style="
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+          "
+        >
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 20px;
+              margin-bottom: 20px;
+            "
+          >
+            <div>
+              <label for="name">Name</label><br />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                style="
+                  width: 100%;
+                  padding: 12px 14px;
+                  border: 1.5px solid var(--border);
+                  border-radius: 8px;
+                  font-family: inherit;
+                  background: var(--cream);
+                  color: var(--ink);
+                "
+              />
+            </div>
+            <div>
+              <label for="email">Email</label><br />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                style="
+                  width: 100%;
+                  padding: 12px 14px;
+                  border: 1.5px solid var(--border);
+                  border-radius: 8px;
+                  font-family: inherit;
+                  background: var(--cream);
+                  color: var(--ink);
+                "
+              />
+            </div>
+          </div>
+          <div style="margin-bottom: 20px">
+            <label for="subject">Subject</label><br />
+            <select
+              id="subject"
+              name="subject"
+              style="
+                width: 100%;
+                padding: 12px 14px;
+                border: 1.5px solid var(--border);
+                border-radius: 8px;
+                font-family: inherit;
+                background: var(--cream);
+                color: var(--ink);
+              "
+            >
+              <option>Support</option>
+              <option>Coaching inquiry</option>
+              <option>Media / Partnership</option>
+              <option>General question</option>
+            </select>
+          </div>
+          <div style="margin-bottom: 20px">
+            <label for="message">Message</label><br />
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              style="
+                width: 100%;
+                padding: 12px 14px;
+                border: 1.5px solid var(--border);
+                border-radius: 8px;
+                font-family: inherit;
+                background: var(--cream);
+                color: var(--ink);
+                resize: vertical;
+              "
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%">
+            Send message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section
+      class="section"
+      aria-label="Direct links"
+      style="background: var(--surface); border-top: 1px solid var(--border)"
+    >
+      <div class="container" style="max-width: 720px; text-align: center">
+        <h2>Direct links</h2>
+        <div class="cards-3" style="margin-top: 32px; text-align: left">
+          <article class="card">
+            <h3>Email</h3>
+            <p>hello@cryptowithshola.com</p>
+            <a
+              href="mailto:hello@cryptowithshola.com"
+              class="btn btn-outline btn-sm"
+              style="margin-top: 12px"
+              >Send email</a
+            >
+          </article>
+          <article class="card">
+            <h3>Telegram</h3>
+            <p>Join the community for updates and discussions.</p>
+            <a
+              href="#"
+              onclick="
+                alert('Telegram link opening...');
+                return false;
+              "
+              class="btn btn-dark btn-sm"
+              style="margin-top: 12px"
+              >Join Telegram</a
+            >
+          </article>
+          <article class="card">
+            <h3>Social links</h3>
+            <p>X, Instagram, and YouTube channels.</p>
+            <a
+              href="#"
+              onclick="
+                alert('Social links opening...');
+                return false;
+              "
+              class="btn btn-outline btn-sm"
+              style="margin-top: 12px"
+              >View social</a
+            >
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Support hours">
+      <div class="container" style="max-width: 720px; text-align: center">
+        <h3>Support hours</h3>
+        <p>Monday — Friday: 09:00 — 17:00 (WAT)</p>
+        <p>Response time: within 48 hours</p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div
+        class="footer-inner"
+        style="max-width: 1000px; grid-template-columns: 2fr 1fr 1fr"
+      >
+        <div>
+          <div class="logo-row">
+            <img src="assets/shola-portrait.png" alt="" /><span
+              >Crypto With Shola</span
+            >
+          </div>
+          <p style="color: rgba(255, 255, 255, 0.5); font-size: 0.88rem">
+            Business and support inquiries.
+          </p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <a href="faq.html">FAQ</a><a href="about.html">About</a>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <a href="disclaimer.html">Disclaimer</a><a href="terms.html">Terms</a>
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <span>© 2026 Crypto With Shola</span><span>Not financial advice.</span>
+      </div>
+    </footer>
+  </body>
+</html>

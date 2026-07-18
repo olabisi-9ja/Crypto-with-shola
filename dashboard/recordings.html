@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recordings — Crypto With Shola</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <nav class="member-nav">
+      <div class="nav-inner">
+        <a href="../index.html" class="nav-logo" style="color: #fff"
+          >Crypto With Shola</a
+        >
+        <div class="nav-links">
+          <a href="index.html">Dashboard</a><a href="lessons.html">Lessons</a
+          ><a href="signals.html">Signals</a><a href="#">Recordings</a
+          ><a href="downloads.html">Downloads</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="dashboard-hero">
+      <div class="container">
+        <h1>Recordings</h1>
+        <p>Replay classes, search by topic, and download links where needed.</p>
+      </div>
+    </header>
+
+    <section class="member-section">
+      <div class="container">
+        <h2>Latest recordings</h2>
+        <div class="cards-3" style="margin-top: 24px">
+          <article class="card">
+            <h3>Live Session — April 18</h3>
+            <p>Strategy review and Q&A. Includes updated setup checklist.</p>
+            <a
+              href="#"
+              onclick="
+                alert('Playing recording...');
+                return false;
+              "
+              class="btn btn-dark btn-sm"
+              >Play</a
+            >
+          </article>
+          <article class="card">
+            <h3>Live Session — April 11</h3>
+            <p>
+              Market overview and position sizing adjustments for current
+              volatility.
+            </p>
+            <a
+              href="#"
+              onclick="
+                alert('Playing recording...');
+                return false;
+              "
+              class="btn btn-dark btn-sm"
+              >Play</a
+            >
+          </article>
+          <article class="card">
+            <h3>Live Session — April 04</h3>
+            <p>
+              Risk management workshop: when to reduce size and when to hold.
+            </p>
+            <a
+              href="#"
+              onclick="
+                alert('Playing recording...');
+                return false;
+              "
+              class="btn btn-dark btn-sm"
+              >Play</a
+            >
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="member-section"
+      style="padding-top: 40px; padding-bottom: 80px"
+    >
+      <div class="container">
+        <h2>Topic search</h2>
+        <p>
+          Search recordings by topic: strategy, risk, chart reading, psychology,
+          or Q&A.
+        </p>
+        <form
+          onsubmit="
+            event.preventDefault();
+            document.getElementById('search-msg').textContent =
+              'Search results would appear here.';
+          "
+          style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap"
+        >
+          <input
+            type="text"
+            placeholder="Search topic..."
+            style="
+              flex: 1;
+              padding: 12px 14px;
+              border: 1.5px solid var(--border);
+              border-radius: 8px;
+              font-family: inherit;
+            "
+          />
+          <button type="submit" class="btn btn-primary btn-sm">Search</button>
+        </form>
+        <p
+          id="search-msg"
+          style="margin-top: 10px; font-size: 0.85rem; color: var(--ink-faint)"
+        ></p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="bottom-bar">
+        <span>© 2026 Crypto With Shola</span
+        ><span>Recordings archived by topic.</span>
+      </div>
+    </footer>
+  </body>
+</html>

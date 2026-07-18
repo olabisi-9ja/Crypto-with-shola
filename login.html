@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login — Crypto With Shola</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <nav class="site-nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo"
+          ><img src="assets/shola-portrait.png" alt="" />Crypto With Shola</a
+        >
+      </div>
+    </nav>
+
+    <header
+      class="hero"
+      style="
+        padding: 100px 24px;
+        background: linear-gradient(135deg, var(--ink) 0%, #2d2926 100%);
+      "
+    >
+      <div class="container section-center" style="max-width: 400px">
+        <h1 style="color: #fff">Member Login</h1>
+        <p style="color: rgba(255, 255, 255, 0.65)">
+          Access your dashboard, recordings, signals, and downloads.
+        </p>
+        <form
+          onsubmit="
+            event.preventDefault();
+            this.innerHTML =
+              '<div style=\'text-align:center;padding:30px;\'><h3>Login submitted</h3><p>Redirecting to dashboard...</p></div>';
+          "
+          style="
+            background: var(--dark-card);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius);
+            padding: 36px;
+            margin-top: 32px;
+          "
+        >
+          <div style="text-align: left; margin-bottom: 16px">
+            <label
+              for="email"
+              style="
+                color: rgba(255, 255, 255, 0.85);
+                display: block;
+                margin-bottom: 6px;
+                font-size: 0.9rem;
+              "
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              style="
+                width: 100%;
+                padding: 12px 14px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 8px;
+                background: var(--ink);
+                color: #fff;
+                font-family: inherit;
+              "
+            />
+          </div>
+          <div style="text-align: left; margin-bottom: 24px">
+            <label
+              for="password"
+              style="
+                color: rgba(255, 255, 255, 0.85);
+                display: block;
+                margin-bottom: 6px;
+                font-size: 0.9rem;
+              "
+              >Password</label
+            >
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              style="
+                width: 100%;
+                padding: 12px 14px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 8px;
+                background: var(--ink);
+                color: #fff;
+                font-family: inherit;
+              "
+            />
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%">
+            Log in
+          </button>
+          <p
+            style="
+              margin-top: 16px;
+              font-size: 0.8rem;
+              color: rgba(255, 255, 255, 0.4);
+            "
+          >
+            Forgot password? Contact support.
+          </p>
+        </form>
+      </div>
+    </header>
+
+    <section class="section" aria-label="Members area links">
+      <div class="container section-center">
+        <h3>Members area</h3>
+        <div
+          style="
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+          "
+        >
+          <a href="dashboard/index.html" class="btn btn-outline btn-sm"
+            >Dashboard</a
+          >
+          <a href="dashboard/lessons.html" class="btn btn-outline btn-sm"
+            >Lessons</a
+          >
+          <a href="dashboard/signals.html" class="btn btn-outline btn-sm"
+            >Signals</a
+          >
+          <a href="dashboard/recordings.html" class="btn btn-outline btn-sm"
+            >Recordings</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="bottom-bar">
+        <span>© 2026 Crypto With Shola</span><span>Secure login.</span>
+      </div>
+    </footer>
+  </body>
+</html>
