@@ -10,27 +10,37 @@
    THEME TOKENS - Systematic & Accessible
    ============================================ */
 :root {
-  /* Brand palette — Pure Monochrome + Emerald Pop */
+  /* Brand palette — Industrial Dark Tech */
   --gold: #00e676; /* Emerald accent */
   --gold-deep: #0a5c36; /* Deep forest accent */
   --gold-light: #69f0ae;
   --gold-soft: #b9f6ca;
-  --cream: #f9f9f9; /* Off-white background */
-  --cream-deep: #f0f0f0;
-  --cream-dark: #e0e0e0;
-  --ink: #111111; /* Off-black text */
-  --ink-deep: #0a0a0a;
-  --ink-soft: #222222;
-  --ink-muted: #555555;
-  --ink-faint: #888888;
-  --surface: #ffffff;
-  --surface-card: #fafafa;
-  --surface-glass: rgba(255, 255, 255, 0.92);
-  --surface-glass-border: rgba(0, 0, 0, 0.05);
-  --dark: #111111;
-  --dark-surface: #1a1a1a;
-  --dark-card: #222222;
+
+  --cream: #050505; /* Inverted: Main dark background */
+  --cream-deep: #0a0a0a;
+  --cream-dark: #111111;
+
+  --ink: #ffffff; /* Inverted: Light text */
+  --ink-deep: #f9f9f9;
+  --ink-soft: #e0e0e0;
+  --ink-muted: #aaaaaa;
+  --ink-faint: #666666;
+
+  --surface: #111111;
+  --surface-card: #161616;
+  --surface-glass: rgba(17, 17, 17, 0.7);
+  --surface-glass-border: rgba(255, 255, 255, 0.05);
+
+  --dark: #050505;
+  --dark-surface: #111111;
+  --dark-card: #161616;
   --dark-border: rgba(255, 255, 255, 0.08);
+
+  /* Grid & Glow */
+  --grid-pattern:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  --grid-size: 32px 32px;
 
   /* Spacing scale */
   --space-xs: 0.5rem;
