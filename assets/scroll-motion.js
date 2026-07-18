@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 2. Staggered Grid Reveals (Cards, Tiers, Results)
-  document.querySelectorAll('.cards-3, .tiers, .testimonials, .features-grid, .results-strip, .bento-3, .grid-table').forEach(container => {
+  document.querySelectorAll('.cards-3, .tiers, .testimonials, .features-grid, .results-strip, .bento-3, .grid-table, .true-bento, .blog-grid').forEach(container => {
     // We select children that we want to stagger. 
     // Fallback to container's direct children if no specific reveal class exists.
-    let items = container.querySelectorAll('.reveal-stagger, .bento-card, .tier-card, .grid-cell, .stat');
+    let items = container.querySelectorAll('.reveal-stagger, .bento-card, .tier-card, .grid-cell, .stat, .blog-card');
     if (items.length === 0) {
         items = container.children;
     }
