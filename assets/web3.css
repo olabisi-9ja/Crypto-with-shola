@@ -1,0 +1,258 @@
+/* Web3 Brutalist Theme Overrides */
+.brutalist-theme {
+  background-color: #000;
+  color: #fff;
+  font-family:
+    "Outfit",
+    -apple-system,
+    sans-serif;
+}
+
+.brutalist-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 40px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.brutalist-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.brutalist-hero {
+  padding: 80px 24px 40px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.web3-hero-text {
+  font-family: "Anton", sans-serif;
+  font-size: clamp(4rem, 12vw, 15rem);
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.hero-3d-object {
+  margin-top: -40px;
+  position: relative;
+  z-index: 10;
+}
+
+.cube-placeholder {
+  width: 240px;
+  height: 240px;
+  background: linear-gradient(145deg, #1a1a1a, #050505);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 60px rgba(75, 155, 255, 0.15);
+  border: 1px solid rgba(75, 155, 255, 0.3);
+  transform: perspective(1000px) rotateY(-15deg) rotateX(10deg);
+  transition: transform 0.5s ease;
+}
+.cube-placeholder:hover {
+  transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+}
+
+.neon-wolf-icon {
+  font-size: 5rem;
+  text-shadow:
+    0 0 30px #4b9bff,
+    0 0 60px #4b9bff;
+  color: transparent;
+  text-shadow: 0 0 0 #4b9bff;
+}
+
+.neon-link {
+  color: #4b9bff !important;
+  text-decoration: none;
+  transition: text-shadow 0.3s ease;
+}
+.neon-link:hover {
+  text-shadow: 0 0 10px rgba(75, 155, 255, 0.5);
+}
+
+.neon-link-text {
+  color: #4b9bff;
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.brutalist-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.brutalist-3col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+}
+@media (min-width: 768px) {
+  .brutalist-3col {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.brutalist-3col p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.media-break img {
+  width: 100%;
+  height: 50vh;
+  min-height: 400px;
+  object-fit: cover;
+  filter: contrast(1.1) brightness(0.8) hue-rotate(190deg);
+  display: block;
+}
+
+.brutalist-grid-section {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  margin: 120px 0;
+}
+
+.brutalist-heading {
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  margin: 60px 0 40px;
+  letter-spacing: -0.02em;
+}
+
+.grid-table {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid #fff;
+}
+@media (min-width: 1024px) {
+  .grid-table {
+    grid-template-columns: 1fr 1fr 240px;
+  }
+}
+
+.grid-cell {
+  padding: 60px 40px;
+  border-bottom: 1px solid #fff;
+}
+@media (min-width: 1024px) {
+  .grid-cell {
+    border-right: 1px solid #fff;
+    border-bottom: none;
+  }
+  .grid-cell:last-child {
+    border-right: none;
+  }
+}
+
+.grid-cell h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: #fff;
+}
+.grid-cell p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.grid-cell.narrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  line-height: 1.1;
+  font-weight: 300;
+}
+
+.brutalist-logos {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-family: "Anton", sans-serif;
+  letter-spacing: 0.05em;
+  padding: 60px 24px;
+  opacity: 0.5;
+}
+
+.brutalist-news {
+  margin: 120px 0;
+}
+
+.news-row {
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.news-row:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.news-meta {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.news-row h3 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin: 12px 0 20px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.news-row p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 24px;
+  font-size: 1.1rem;
+}
+
+.brutalist-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 60px 0;
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-logo {
+  font-size: 2rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 32px;
+}
+.footer-links a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.footer-links a:hover {
+  color: #fff;
+}
