@@ -14,18 +14,8 @@
   <body>
     <nav class="site-nav" aria-label="Main">
       <div class="nav-inner">
-        <a href="../index.html" class="nav-logo"
-          ><img src="../assets/shola-portrait.png" alt="" />Crypto With Shola</a
-        >
-        <div class="nav-links">
-          <a href="../index.html">Home</a>
-          <a href="../about.html">About</a>
-          <a href="../learn.html">Learn</a>
-          <a href="#">Blog</a>
-          <a href="../contact.html" class="btn btn-sm btn-primary"
-            >Join Telegram</a
-          >
-        </div>
+        <a href="../index.html" class="nav-logo cws-logo">CWS</a>
+        <div class="nav-links">${blogLinks}        </div>
       </div>
     </nav>
 
@@ -44,68 +34,45 @@
       <div class="container">
         <div class="blog-grid">
           <article class="blog-card">
-            <img
-              src="../assets/blog-chart.png"
-              alt="Laptop with coffee"
-              loading="lazy"
-            />
+            <img src="${post.img}" alt="" loading="lazy" />
             <div class="blog-body">
-              <div class="tag">Crypto Basics</div>
-              <h3>How to read a crypto chart without getting overwhelmed</h3>
-              <p>
-                A beginner-friendly guide to support, resistance, and trend
-                identification.
-              </p>
-              <a href="#">Read more →</a>
+              <div class="tag">${post.category}</div>
+              <h3>${post.title}</h3>
+              <p>${post.excerpt}</p>
+              <a href="${post.id}.html">Read more →</a>
             </div>
           </article>
+
           <article class="blog-card">
-            <img
-              src="../assets/proof-chart.png"
-              alt="Data chart"
-              loading="lazy"
-            />
+            <img src="${post.img}" alt="" loading="lazy" />
             <div class="blog-body">
-              <div class="tag">Market Updates</div>
-              <h3>March 2026 market recap: wins, losses, and lessons</h3>
-              <p>
-                Transparent breakdown of every verified setup from the past
-                month.
-              </p>
-              <a href="#">Read more →</a>
+              <div class="tag">${post.category}</div>
+              <h3>${post.title}</h3>
+              <p>${post.excerpt}</p>
+              <a href="${post.id}.html">Read more →</a>
             </div>
           </article>
+
           <article class="blog-card">
-            <img
-              src="../assets/learn-hero.png"
-              alt="Abstract gold"
-              loading="lazy"
-            />
+            <img src="${post.img}" alt="" loading="lazy" />
             <div class="blog-body">
-              <div class="tag">Trading Psychology</div>
-              <h3>Why discipline beats intelligence in trading</h3>
-              <p>
-                The habits that separate consistent traders from emotional ones.
-              </p>
-              <a href="#">Read more →</a>
+              <div class="tag">${post.category}</div>
+              <h3>${post.title}</h3>
+              <p>${post.excerpt}</p>
+              <a href="${post.id}.html">Read more →</a>
             </div>
           </article>
+
           <article class="blog-card">
-            <img
-              src="../assets/shola-portrait.png"
-              alt="Shola"
-              loading="lazy"
-            />
+            <img src="${post.img}" alt="" loading="lazy" />
             <div class="blog-body">
-              <div class="tag">Shola Insights</div>
-              <h3>The real story behind Crypto With Shola</h3>
-              <p>How a personal blog became a full-time education platform.</p>
-              <a href="#">Read more →</a>
+              <div class="tag">${post.category}</div>
+              <h3>${post.title}</h3>
+              <p>${post.excerpt}</p>
+              <a href="${post.id}.html">Read more →</a>
             </div>
           </article>
-        </div>
-      </div>
-    </section>
+</div></div></section>
 
     <section
       class="section"

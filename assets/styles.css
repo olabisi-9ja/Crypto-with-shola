@@ -1784,3 +1784,23 @@ p.lead {
     font-size: 1.05rem;
   }
 }
+
+@keyframes cws-flow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+.cws-logo {
+  background: linear-gradient(90deg, #ff6339, #e8ff40, #ff6339);
+  background-size: 200% auto;
+  color: transparent !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: cws-flow 3s linear infinite;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  font-family: 'Syne', sans-serif;
+  text-transform: uppercase;
+}
+.wordmark.cws-logo {
+  font-size: 24px;
+}
