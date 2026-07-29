@@ -1,7 +1,7 @@
 import React from 'react';
 import { LandingNavbar } from '../components/LandingNavbar';
 import { LandingFooter } from '../components/LandingFooter';
-import { images } from '../lib/images';
+import { BookOpen, GraduationCap, Blocks } from 'lucide-react';
 
 export function LearnPage() {
   const lessons = [
@@ -39,8 +39,23 @@ export function LearnPage() {
 
         {/* Hero image for Learn */}
         <section className="portrait-feature" style={{background: 'var(--acid)', padding: '0 10vw'}}>
-          <div className="feature-image" style={{paddingTop: '7vw'}}>
-            <img src={images.cryptoCoins} alt="Learn hero" style={{mixBlendMode: 'multiply', filter: 'grayscale(1) contrast(1.2)'}} />
+          <div className="feature-image" style={{paddingTop: '7vw', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '300px'}}>
+            <div style={{position: 'relative', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+              {/* Decorative background circle */}
+              <div style={{position: 'absolute', width: '250px', height: '250px', borderRadius: '50%', border: '2px solid var(--ink)', opacity: 0.2, top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}} />
+              <div style={{position: 'absolute', top: '50%', left: '50%', width: '0', height: '0', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <div className="animate-spin" style={{position: 'absolute', width: '350px', height: '350px', borderRadius: '50%', border: '1px dashed var(--ink)', opacity: 0.15, animationDuration: '40s'}} />
+              </div>
+              
+              {/* Main Icon Composition */}
+              <div style={{position: 'relative', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px', color: 'var(--ink)'}}>
+                <GraduationCap size={120} strokeWidth={1} />
+                <div style={{display: 'flex', gap: '40px', marginTop: '-20px'}}>
+                  <BookOpen size={48} strokeWidth={1} style={{transform: 'rotate(-15deg)'}} />
+                  <Blocks size={48} strokeWidth={1} style={{transform: 'rotate(15deg)'}} />
+                </div>
+              </div>
+            </div>
           </div>
           <div className="feature-copy">
             <p className="eyebrow">Foundation</p>
