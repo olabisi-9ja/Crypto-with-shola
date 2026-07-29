@@ -101,7 +101,7 @@ export function ContactPage() {
                 type="submit"
                 disabled={submitted}
                 className="round-link"
-                style={{border: 'none', cursor: 'pointer', background: 'var(--ink)', color: 'white', padding: '10px 10px 10px 22px'}}
+                style={{border: 'none', cursor: 'pointer', background: 'var(--ink)', color: 'white', padding: '10px 10px 10px 22px', alignSelf: 'flex-start'}}
               >
                 <span>{submitted ? 'Sending...' : 'Send Message'}</span>
                 <b style={{background: 'var(--acid)', color: 'var(--ink)'}}><Send size={16} /></b>
