@@ -192,8 +192,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 @media (max-width: 750px) {
   .home-header { height: auto; min-height: 70px; grid-template-columns: 1fr auto; padding: 14px 5vw; row-gap: 14px; }
-  .home-header nav { grid-column: 1 / -1; grid-row: 2; display: flex; gap: 14px; overflow-x: auto; padding-bottom: 2px; }
-  .home-header nav a { white-space: nowrap; font-size: 10px; }
   .header-cta { font-size: 9px; padding: 9px 12px; }
   .hero-home { padding: 18vw 7vw 12vw; display: flex; flex-direction: column; min-height: auto; }
   .hero-copy { display: contents; }
