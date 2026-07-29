@@ -83,37 +83,37 @@ export function Web3Page() {
             className="w-full flex flex-col items-center relative z-10 px-6 pt-12"
           >
             {/* Giant Metallic/Faded Text */}
-            <h1 className="text-[28vw] md:text-[22vw] font-black tracking-tighter leading-[0.75] select-none text-transparent bg-clip-text bg-gradient-to-b from-white via-white/80 to-[#111] opacity-100" style={{fontFamily: 'var(--display)'}}>
+            <h1 className="text-[20vw] sm:text-[18vw] md:text-[16vw] font-black tracking-tighter leading-[0.75] select-none text-transparent bg-clip-text bg-gradient-to-b from-white via-white/80 to-[#111] opacity-100" style={{fontFamily: 'var(--display)'}}>
               WEB3
             </h1>
 
             {/* Fanning Cards Effect */}
-            <div className="relative mt-8 md:-mt-20 w-full max-w-5xl h-[450px] md:h-[500px] flex justify-center items-end perspective-[1200px]">
+            <div className="relative mt-8 md:-mt-20 w-full max-w-5xl h-[400px] md:h-[500px] flex justify-center items-end perspective-[1200px]">
               
               {/* Back Card (Left) */}
               <motion.div 
-                initial={{ opacity: 0, rotateZ: -12, x: -100, y: 100 }}
-                animate={{ opacity: 1, rotateZ: -8, x: -80, y: 40 }}
+                initial={{ opacity: 0, rotateZ: -12, x: "-15%", y: 100 }}
+                animate={{ opacity: 1, rotateZ: -6, x: "-8%", y: 40 }}
                 transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-                className="absolute w-[85%] max-w-[700px] h-[350px] md:h-[400px] bg-[#080808] border border-[#222] rounded-t-3xl shadow-2xl overflow-hidden"
+                className="absolute w-[80%] md:w-[85%] max-w-[700px] h-[300px] md:h-[400px] bg-[#080808] border border-[#222] rounded-t-3xl shadow-2xl overflow-hidden"
               >
-                <div className="p-6 opacity-40 flex items-center justify-center border-b border-[#222]">
-                  <div className="font-bold tracking-widest text-white text-sm flex items-center gap-2">
-                    <div className="w-4 h-4 bg-white"></div> PORTAL
+                <div className="p-4 md:p-6 opacity-40 flex items-center justify-center border-b border-[#222]">
+                  <div className="font-bold tracking-widest text-white text-xs md:text-sm flex items-center gap-2">
+                    <div className="w-3 h-3 md:w-4 md:h-4 bg-white"></div> PORTAL
                   </div>
                 </div>
               </motion.div>
 
               {/* Back Card (Right) */}
               <motion.div 
-                initial={{ opacity: 0, rotateZ: 12, x: 100, y: 100 }}
-                animate={{ opacity: 1, rotateZ: 8, x: 80, y: 40 }}
+                initial={{ opacity: 0, rotateZ: 12, x: "15%", y: 100 }}
+                animate={{ opacity: 1, rotateZ: 6, x: "8%", y: 40 }}
                 transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-                className="absolute w-[85%] max-w-[700px] h-[350px] md:h-[400px] bg-gradient-to-b from-[#1c0812] to-[#050505] border border-[#441122] rounded-t-3xl shadow-2xl overflow-hidden"
+                className="absolute w-[80%] md:w-[85%] max-w-[700px] h-[300px] md:h-[400px] bg-gradient-to-b from-[#1c0812] to-[#050505] border border-[#441122] rounded-t-3xl shadow-2xl overflow-hidden"
               >
-                <div className="p-6 opacity-40 flex items-center justify-center border-b border-[#441122]">
-                  <div className="font-bold tracking-widest text-white text-sm flex items-center gap-2">
-                    <div className="w-4 h-4 bg-[#ff0055]"></div> COMMUNITY
+                <div className="p-4 md:p-6 opacity-40 flex items-center justify-center border-b border-[#441122]">
+                  <div className="font-bold tracking-widest text-white text-xs md:text-sm flex items-center gap-2">
+                    <div className="w-3 h-3 md:w-4 md:h-4 bg-[#ff0055]"></div> COMMUNITY
                   </div>
                 </div>
               </motion.div>
@@ -126,18 +126,18 @@ export function Web3Page() {
                 className="absolute z-20 w-[95%] max-w-[800px] h-[350px] md:h-[420px] bg-[#050505] border border-[#333] rounded-t-3xl shadow-[0_-30px_60px_rgba(0,0,0,0.9)] overflow-hidden flex flex-col"
               >
                 {/* Card Header */}
-                <div className="flex justify-center items-center p-6 border-b border-[#1a1a1a]">
-                  <div className="font-bold tracking-widest text-white text-sm flex items-center gap-2" style={{fontFamily: 'var(--mono)'}}>
-                    <div className="w-4 h-4 bg-[#e8ff40] clip-path-polygon-[0_0,100%_0,100%_100%,0_100%,0_50%,50%_50%]"></div> CWS
+                <div className="flex justify-center items-center p-4 md:p-6 border-b border-[#1a1a1a]">
+                  <div className="font-bold tracking-widest text-white text-xs md:text-sm flex items-center gap-2" style={{fontFamily: 'var(--mono)'}}>
+                    <div className="w-3 h-3 md:w-4 md:h-4 bg-[#e8ff40] clip-path-polygon-[0_0,100%_0,100%_100%,0_100%,0_50%,50%_50%]"></div> CWS
                   </div>
                 </div>
 
                 {/* Card Content */}
-                <div className="flex-1 flex flex-col items-center justify-center p-8 text-center relative overflow-hidden bg-gradient-to-b from-transparent to-[#0a0a0a]">
-                  <h2 className="text-4xl md:text-6xl font-black text-white tracking-tight leading-tight z-10">
+                <div className="flex-1 flex flex-col items-center justify-center p-6 md:p-8 text-center relative overflow-hidden bg-gradient-to-b from-transparent to-[#0a0a0a]">
+                  <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-white tracking-tight leading-tight z-10">
                     The exclusive<br />blockchain community
                   </h2>
-                  <p className="text-[#888] mt-6 max-w-md text-base md:text-lg z-10">Get monthly insights, advanced strategies, and unfiltered access to the leading minds in the crypto space.</p>
+                  <p className="text-[#888] mt-4 md:mt-6 max-w-md text-sm md:text-lg z-10">Get monthly insights, advanced strategies, and unfiltered access to the leading minds in the crypto space.</p>
                   
                   {/* Subtle particle effect at bottom of card */}
                   <div className="absolute bottom-0 left-0 w-full h-[150px] bg-gradient-to-t from-[#112] to-transparent mix-blend-screen"></div>
