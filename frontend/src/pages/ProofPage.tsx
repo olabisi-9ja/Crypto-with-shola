@@ -62,10 +62,10 @@ export function ProofPage() {
           </div>
           <div className="notes-grid" style={{borderColor: 'white'}}>
             {recaps.map((r, i) => (
-              <div key={i} className="note" style={{borderColor: 'var(--line)', border: '1px solid rgba(255,255,255,0.2)', margin: '-1px 0 0 -1px'}}>
-                <span style={{color: 'var(--orange)'}}>LOSS / {String(i+1).padStart(2, '0')}</span>
-                <h3 style={{color: 'white'}}>{r.month}</h3>
-                <p style={{color: 'white'}}>{r.desc}</p>
+              <div key={i} className="note group text-white hover:text-[var(--ink)]" style={{borderColor: 'var(--line)', border: '1px solid rgba(255,255,255,0.2)', margin: '-1px 0 0 -1px'}}>
+                <span className="text-[var(--orange)] group-hover:text-[var(--ink)] transition-colors">LOSS / {String(i+1).padStart(2, '0')}</span>
+                <h3>{r.month}</h3>
+                <p>{r.desc}</p>
               </div>
             ))}
           </div>

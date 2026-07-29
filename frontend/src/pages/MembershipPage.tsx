@@ -112,10 +112,10 @@ export function MembershipPage() {
           </div>
           <div className="notes-grid" style={{borderColor: 'white'}}>
             {includes.map((inc, i) => (
-              <div key={i} className="note" style={{borderColor: 'var(--line)', border: '1px solid rgba(255,255,255,0.2)', margin: '-1px 0 0 -1px'}}>
-                <span style={{color: 'var(--orange)'}}>0{i+1} / Feature</span>
-                <h3 style={{color: 'white'}}>{inc.title}</h3>
-                <p style={{color: 'white'}}>{inc.desc}</p>
+              <div key={i} className="note group text-white hover:text-[var(--ink)]" style={{borderColor: 'var(--line)', border: '1px solid rgba(255,255,255,0.2)', margin: '-1px 0 0 -1px'}}>
+                <span className="text-[var(--orange)] group-hover:text-[var(--ink)] transition-colors">0{i+1} / Feature</span>
+                <h3>{inc.title}</h3>
+                <p>{inc.desc}</p>
               </div>
             ))}
           </div>

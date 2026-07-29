@@ -96,10 +96,10 @@ export function LearnPage() {
           </div>
           <div className="notes-grid" style={{borderColor: 'white'}}>
             {mistakes.map((m, i) => (
-              <div key={i} className="note" style={{borderColor: 'var(--line)', border: '1px solid rgba(255,255,255,0.2)', margin: '-1px 0 0 -1px'}}>
-                <span style={{color: 'var(--orange)'}}>Warning / {String(i+1).padStart(2, '0')}</span>
-                <h3 style={{color: 'white'}}>{m.title}</h3>
-                <p style={{color: 'white'}}>{m.desc}</p>
+              <div key={i} className="note group text-white hover:text-[var(--ink)]" style={{borderColor: 'var(--line)', border: '1px solid rgba(255,255,255,0.2)', margin: '-1px 0 0 -1px'}}>
+                <span className="text-[var(--orange)] group-hover:text-[var(--ink)] transition-colors">Warning / {String(i+1).padStart(2, '0')}</span>
+                <h3>{m.title}</h3>
+                <p>{m.desc}</p>
               </div>
             ))}
           </div>
