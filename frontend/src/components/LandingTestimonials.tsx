@@ -57,19 +57,19 @@ export function LandingTestimonials() {
         {/* Results Strip */}
         <div className="bg-foreground text-background p-8 md:p-12 mb-24 grid grid-cols-2 md:grid-cols-4 gap-8 border border-border text-center">
           <div className="flex flex-col border-r border-background/20 last:border-0">
-            <span className="text-4xl md:text-5xl font-black mb-2" style={{fontFamily: 'var(--display)'}}>109K+</span>
+            <span className="text-4xl md:text-5xl font-black mb-2" style={{fontFamily: 'var(--sans)'}}>109K+</span>
             <span className="text-background/70 text-sm" style={{fontFamily: 'var(--mono)', textTransform: 'uppercase'}}>Telegram Subscribers</span>
           </div>
           <div className="flex flex-col border-r border-background/20 last:border-0 pl-0 md:pl-8">
-            <span className="text-4xl md:text-5xl font-black mb-2" style={{fontFamily: 'var(--display)'}}>394K</span>
+            <span className="text-4xl md:text-5xl font-black mb-2" style={{fontFamily: 'var(--sans)'}}>394K</span>
             <span className="text-background/70 text-sm" style={{fontFamily: 'var(--mono)', textTransform: 'uppercase'}}>X/Twitter Followers</span>
           </div>
           <div className="flex flex-col border-r border-background/20 last:border-0 pl-0 md:pl-8">
-            <span className="text-4xl md:text-5xl font-black mb-2" style={{fontFamily: 'var(--display)'}}>2022</span>
+            <span className="text-4xl md:text-5xl font-black mb-2" style={{fontFamily: 'var(--sans)'}}>2022</span>
             <span className="text-background/70 text-sm" style={{fontFamily: 'var(--mono)', textTransform: 'uppercase'}}>Community Founded</span>
           </div>
           <div className="flex flex-col pl-0 md:pl-8">
-            <span className="text-4xl md:text-5xl font-black mb-2" style={{fontFamily: 'var(--display)'}}>13.9K</span>
+            <span className="text-4xl md:text-5xl font-black mb-2" style={{fontFamily: 'var(--sans)'}}>13.9K</span>
             <span className="text-background/70 text-sm" style={{fontFamily: 'var(--mono)', textTransform: 'uppercase'}}>Avg. Views Per Post</span>
           </div>
         </div>
