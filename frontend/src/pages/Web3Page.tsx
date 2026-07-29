@@ -69,32 +69,125 @@ export function Web3Page() {
       </nav>
 
       <main>
-        {/* Old Sleek Hero Section */}
-        <section className="relative min-h-[80vh] flex items-center justify-center pt-20 overflow-hidden">
+        {/* ALFA-Inspired Hero Section */}
+        <section className="relative min-h-[90vh] flex flex-col items-center justify-center pt-32 overflow-hidden bg-black">
+          {/* Abstract Wave Background (Simulated via gradients) */}
+          <div className="absolute inset-0 z-0 opacity-60">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[20%] bg-gradient-to-r from-transparent via-[#458b97]/30 to-transparent blur-[60px] transform -rotate-12"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[15%] bg-gradient-to-r from-transparent via-[#ff8800]/20 to-transparent blur-[50px] transform rotate-6 mt-16"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[10%] bg-gradient-to-r from-transparent via-[#e8ff40]/10 to-transparent blur-[40px] transform -rotate-3 mb-12"></div>
+          </div>
+
           <motion.div 
             style={{ y: yHero }}
-            className="px-6 md:px-12 max-w-[1600px] mx-auto w-full flex flex-col md:flex-row justify-between items-center"
+            className="w-full flex flex-col items-center relative z-10 px-6 pt-12"
           >
-            {/* Left Big Text */}
-            <div className="w-full md:w-2/3 relative z-10">
-              <h1 className="text-[14vw] md:text-[11vw] leading-[0.8] font-black tracking-tighter uppercase" style={{fontFamily: 'var(--display)'}}>
-                <span className="text-white">DEFI.</span><br />
-                <i className="font-serif font-light lowercase text-[#a1a1aa] text-[12vw] md:text-[9vw] leading-[0.5] block -ml-4" style={{fontFamily: 'Georgia, serif', letterSpacing: '-0.05em'}}>master</i>
-                <span className="text-[#e8ff40]">WEB3.</span><br />
-                <span className="text-[#ff0055]">TOKENS.</span>
-              </h1>
-            </div>
+            {/* Giant Metallic/Faded Text */}
+            <h1 className="text-[28vw] md:text-[22vw] font-black tracking-tighter leading-[0.75] select-none text-transparent bg-clip-text bg-gradient-to-b from-white via-white/80 to-[#111] opacity-100" style={{fontFamily: 'var(--display)'}}>
+              WEB3
+            </h1>
 
-            {/* Right Text */}
-            <div className="w-full md:w-1/3 mt-12 md:mt-0 relative z-10 text-right md:text-left self-end">
-              <p className="text-[#a1a1aa] text-lg md:text-xl font-light leading-relaxed">
-                Welcome to the exclusive Web3 Portal. Get monthly insights, advanced strategies, and unfiltered access to the leading minds in the crypto space. <strong className="text-white font-medium">Cut through the noise.</strong>
-              </p>
+            {/* Fanning Cards Effect */}
+            <div className="relative mt-8 md:-mt-20 w-full max-w-5xl h-[450px] md:h-[500px] flex justify-center items-end perspective-[1200px]">
+              
+              {/* Back Card (Left) */}
+              <motion.div 
+                initial={{ opacity: 0, rotateZ: -12, x: -100, y: 100 }}
+                animate={{ opacity: 1, rotateZ: -8, x: -80, y: 40 }}
+                transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
+                className="absolute w-[85%] max-w-[700px] h-[350px] md:h-[400px] bg-[#080808] border border-[#222] rounded-t-3xl shadow-2xl overflow-hidden"
+              >
+                <div className="p-6 opacity-40 flex items-center justify-between border-b border-[#222]">
+                  <div className="font-bold tracking-widest text-white text-sm flex items-center gap-2">
+                    <div className="w-4 h-4 bg-white"></div> PORTAL
+                  </div>
+                  <div className="hidden md:flex gap-8 text-sm">
+                    <span>Curriculum</span>
+                    <span>Mentors</span>
+                  </div>
+                  <div className="flex gap-2 bg-[#111] p-1 rounded-full border border-[#222]">
+                    <div className="px-3 py-1 bg-white text-black rounded-full text-xs font-bold">EN</div>
+                    <div className="px-3 py-1 text-xs font-bold text-[#666]">FR</div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Back Card (Right) */}
+              <motion.div 
+                initial={{ opacity: 0, rotateZ: 12, x: 100, y: 100 }}
+                animate={{ opacity: 1, rotateZ: 8, x: 80, y: 40 }}
+                transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
+                className="absolute w-[85%] max-w-[700px] h-[350px] md:h-[400px] bg-gradient-to-b from-[#1c0812] to-[#050505] border border-[#441122] rounded-t-3xl shadow-2xl overflow-hidden"
+              >
+                <div className="p-6 opacity-40 flex items-center justify-between border-b border-[#441122]">
+                  <div className="font-bold tracking-widest text-white text-sm flex items-center gap-2">
+                    <div className="w-4 h-4 bg-[#ff0055]"></div> COMMUNITY
+                  </div>
+                  <div className="hidden md:flex gap-8 text-sm">
+                    <span>Inner Circle</span>
+                    <span>Access</span>
+                  </div>
+                  <div className="flex gap-2 bg-[#111] p-1 rounded-full border border-[#222]">
+                    <div className="px-3 py-1 bg-white text-black rounded-full text-xs font-bold">EN</div>
+                    <div className="px-3 py-1 text-xs font-bold text-[#666]">FR</div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Front Card */}
+              <motion.div 
+                initial={{ opacity: 0, y: 150 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
+                className="absolute z-20 w-[95%] max-w-[800px] h-[350px] md:h-[420px] bg-[#050505] border border-[#333] rounded-t-3xl shadow-[0_-30px_60px_rgba(0,0,0,0.9)] overflow-hidden flex flex-col"
+              >
+                {/* Fake Browser Nav */}
+                <div className="flex justify-between items-center p-6 border-b border-[#1a1a1a]">
+                  <div className="font-bold tracking-widest text-white text-sm flex items-center gap-2" style={{fontFamily: 'var(--mono)'}}>
+                    <div className="w-4 h-4 bg-[#e8ff40] clip-path-polygon-[0_0,100%_0,100%_100%,0_100%,0_50%,50%_50%]"></div> CWS
+                  </div>
+                  <div className="hidden md:flex gap-12 text-sm text-[#888]">
+                    <span className="hover:text-white transition-colors cursor-pointer text-white">Alfa</span>
+                    <span className="hover:text-white transition-colors cursor-pointer">Yield</span>
+                    <span className="hover:text-white transition-colors cursor-pointer">Invest</span>
+                    <span className="hover:text-white transition-colors cursor-pointer">White</span>
+                  </div>
+                  <div className="flex gap-2 bg-[#111] p-1 rounded-full border border-[#222]">
+                    <div className="px-3 py-1 bg-[#333] rounded-full text-xs font-bold text-white">EN</div>
+                    <div className="px-3 py-1 text-xs font-bold text-[#666]">RU</div>
+                  </div>
+                </div>
+
+                {/* Card Content */}
+                <div className="flex-1 flex flex-col items-center justify-center p-8 text-center relative overflow-hidden bg-gradient-to-b from-transparent to-[#0a0a0a]">
+                  <h2 className="text-4xl md:text-6xl font-black text-white tracking-tight leading-tight z-10">
+                    The exclusive<br />blockchain community
+                  </h2>
+                  <p className="text-[#888] mt-6 max-w-md text-base md:text-lg z-10">Get monthly insights, advanced strategies, and unfiltered access to the leading minds in the crypto space.</p>
+                  
+                  {/* Subtle particle effect at bottom of card */}
+                  <div className="absolute bottom-0 left-0 w-full h-[150px] bg-gradient-to-t from-[#112] to-transparent mix-blend-screen"></div>
+                  {[...Array(40)].map((_, i) => (
+                    <div 
+                      key={i} 
+                      className="absolute rounded-full bg-[#00e5ff]"
+                      style={{
+                        width: Math.random() * 3 + 1 + 'px',
+                        height: Math.random() * 3 + 1 + 'px',
+                        left: Math.random() * 100 + '%',
+                        bottom: Math.random() * 25 + '%',
+                        opacity: Math.random() * 0.5 + 0.1,
+                      }}
+                    ></div>
+                  ))}
+                </div>
+              </motion.div>
+
             </div>
           </motion.div>
           
           {/* Subtle noise texture overlay */}
-          <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay" style={{backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")'}}></div>
+          <div className="absolute inset-0 opacity-[0.03] z-30 pointer-events-none mix-blend-overlay" style={{backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")'}}></div>
         </section>
 
         {/* Scrolling Ticker */}
