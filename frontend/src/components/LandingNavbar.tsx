@@ -35,10 +35,9 @@ export function LandingNavbar() {
             <Link key={link.to} to={link.to}>{link.label}</Link>
           ))}
           <Link to="/web3" className="relative group text-xs font-bold font-mono" style={{ marginLeft: '10px' }}>
-            <span className="flex items-center gap-1 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500 group-hover:from-orange-400 group-hover:to-amber-400 transition-all">
-              WEB3 PORTAL <span className="text-orange-500 animate-pulse">●</span>
+            <span className="flex items-center gap-1 text-black bg-[#e8ff40] px-3 py-1 rounded-full group-hover:bg-[#d4e838] transition-colors">
+              WEB3 PORTAL <span className="text-[#ff0055]">●</span>
             </span>
-            <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-orange-500 to-amber-500 group-hover:w-full transition-all duration-300 ease-out"></span>
           </Link>
         </nav>
         
@@ -81,12 +80,12 @@ export function LandingNavbar() {
               <Link 
                 to="/web3" 
                 onClick={() => setIsOpen(false)}
-                className="mt-4 border border-orange-500/30 p-4 rounded-xl flex items-center justify-between group hover:border-orange-500 transition-colors"
+                className="mt-4 bg-[#e8ff40] text-black p-4 rounded-xl flex items-center justify-between group hover:bg-[#d4e838] transition-colors"
               >
-                <span className="font-mono text-sm uppercase tracking-widest font-bold flex items-center gap-2 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">
-                  WEB3 PORTAL <span className="text-orange-500 animate-pulse">●</span>
+                <span className="font-mono text-sm uppercase tracking-widest font-bold flex items-center gap-2">
+                  WEB3 PORTAL <span className="text-[#ff0055]">●</span>
                 </span>
-                <span className="text-xl text-orange-500 group-hover:translate-x-2 transition-transform">→</span>
+                <span className="text-xl group-hover:translate-x-2 transition-transform">→</span>
               </Link>
               
               <Link 

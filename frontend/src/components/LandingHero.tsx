@@ -68,7 +68,14 @@ export function LandingHero() {
       <div className="hero-visual reveal-2" style={{position: 'relative'}}>
         <div className="sun" style={{zIndex: 10}}>₿</div>
         <figure style={{zIndex: 2}}>
-          <img src="/images/new_media/imgi_2_aHR0cHM6Ly9pbWFnZXMuZ3Jvb3ZldGVjaC5pby9QbDZpNDVwWHpwM3VqRkxibVpCMm1JTEU0WHNJT2I4U3pCaVNVcHJDNkI4L3JzOmZvcmNlOjYzMTo3MDA6MS9nOm5vd2U6NDk1OjQ4NS9jOjYzMTo3MDAvYUhSMGNITTZMeT.webp" alt="Shola, founder of Crypto With Shola" style={{borderRadius: '0', border: '2px solid var(--ink)'}} />
+          <img 
+            src={images.sholaAvatar2} 
+            alt="Shola, founder of Crypto With Shola" 
+            loading="eager"
+            fetchPriority="high"
+            decoding="sync"
+            style={{borderRadius: '0', border: '2px solid var(--ink)'}} 
+          />
         </figure>
         
         {/* Unclipped caption */}
