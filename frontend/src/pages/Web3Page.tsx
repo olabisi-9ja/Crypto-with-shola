@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowLeft, ArrowUpRight, Zap, Shield, Blocks, Gem, Lock, Users, Network, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
 import { coaches } from '../lib/coaches';
 
 const TickerTape = () => {
@@ -29,8 +29,18 @@ const TickerTape = () => {
 };
 
 export function Web3Page() {
-  const { scrollYProgress } = useScroll();
+  const { scrollYProgress, scrollY } = useScroll();
   const yHero = useTransform(scrollYProgress, [0, 1], [0, 300]);
+  const [hidden, setHidden] = React.useState(false);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious() || 0;
+    if (latest > previous && latest > 150) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
 
   const curriculum = [
     {
@@ -59,7 +69,7 @@ export function Web3Page() {
     <div className="bg-[#050505] min-h-screen text-white overflow-hidden selection:bg-[#ff0055] selection:text-white" style={{fontFamily: 'var(--sans)'}}>
       
       {/* Navbar */}
-      <nav className="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center mix-blend-difference bg-black/10 backdrop-blur-md border-b border-[#1a1a1a]">
+      <nav className={`fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center mix-blend-difference bg-black/10 backdrop-blur-md border-b border-[#1a1a1a] transition-transform duration-300 ease-in-out ${hidden ? '-translate-y-full md:translate-y-0' : 'translate-y-0'}`}>
         <Link to="/" className="text-white hover:text-[#e8ff40] transition-colors flex items-center gap-2 text-sm uppercase tracking-widest font-bold" style={{fontFamily: 'var(--mono)'}}>
           <ArrowLeft size={16} /> RETURN HOME
         </Link>
