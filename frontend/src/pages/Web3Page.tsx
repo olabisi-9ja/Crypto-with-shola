@@ -97,17 +97,9 @@ export function Web3Page() {
                 transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
                 className="absolute w-[85%] max-w-[700px] h-[350px] md:h-[400px] bg-[#080808] border border-[#222] rounded-t-3xl shadow-2xl overflow-hidden"
               >
-                <div className="p-6 opacity-40 flex items-center justify-between border-b border-[#222]">
+                <div className="p-6 opacity-40 flex items-center justify-center border-b border-[#222]">
                   <div className="font-bold tracking-widest text-white text-sm flex items-center gap-2">
                     <div className="w-4 h-4 bg-white"></div> PORTAL
-                  </div>
-                  <div className="hidden md:flex gap-8 text-sm">
-                    <span>Curriculum</span>
-                    <span>Mentors</span>
-                  </div>
-                  <div className="flex gap-2 bg-[#111] p-1 rounded-full border border-[#222]">
-                    <div className="px-3 py-1 bg-white text-black rounded-full text-xs font-bold">EN</div>
-                    <div className="px-3 py-1 text-xs font-bold text-[#666]">FR</div>
                   </div>
                 </div>
               </motion.div>
@@ -119,17 +111,9 @@ export function Web3Page() {
                 transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
                 className="absolute w-[85%] max-w-[700px] h-[350px] md:h-[400px] bg-gradient-to-b from-[#1c0812] to-[#050505] border border-[#441122] rounded-t-3xl shadow-2xl overflow-hidden"
               >
-                <div className="p-6 opacity-40 flex items-center justify-between border-b border-[#441122]">
+                <div className="p-6 opacity-40 flex items-center justify-center border-b border-[#441122]">
                   <div className="font-bold tracking-widest text-white text-sm flex items-center gap-2">
                     <div className="w-4 h-4 bg-[#ff0055]"></div> COMMUNITY
-                  </div>
-                  <div className="hidden md:flex gap-8 text-sm">
-                    <span>Inner Circle</span>
-                    <span>Access</span>
-                  </div>
-                  <div className="flex gap-2 bg-[#111] p-1 rounded-full border border-[#222]">
-                    <div className="px-3 py-1 bg-white text-black rounded-full text-xs font-bold">EN</div>
-                    <div className="px-3 py-1 text-xs font-bold text-[#666]">FR</div>
                   </div>
                 </div>
               </motion.div>
@@ -141,20 +125,10 @@ export function Web3Page() {
                 transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
                 className="absolute z-20 w-[95%] max-w-[800px] h-[350px] md:h-[420px] bg-[#050505] border border-[#333] rounded-t-3xl shadow-[0_-30px_60px_rgba(0,0,0,0.9)] overflow-hidden flex flex-col"
               >
-                {/* Fake Browser Nav */}
-                <div className="flex justify-between items-center p-6 border-b border-[#1a1a1a]">
+                {/* Card Header */}
+                <div className="flex justify-center items-center p-6 border-b border-[#1a1a1a]">
                   <div className="font-bold tracking-widest text-white text-sm flex items-center gap-2" style={{fontFamily: 'var(--mono)'}}>
                     <div className="w-4 h-4 bg-[#e8ff40] clip-path-polygon-[0_0,100%_0,100%_100%,0_100%,0_50%,50%_50%]"></div> CWS
-                  </div>
-                  <div className="hidden md:flex gap-12 text-sm text-[#888]">
-                    <span className="hover:text-white transition-colors cursor-pointer text-white">Alfa</span>
-                    <span className="hover:text-white transition-colors cursor-pointer">Yield</span>
-                    <span className="hover:text-white transition-colors cursor-pointer">Invest</span>
-                    <span className="hover:text-white transition-colors cursor-pointer">White</span>
-                  </div>
-                  <div className="flex gap-2 bg-[#111] p-1 rounded-full border border-[#222]">
-                    <div className="px-3 py-1 bg-[#333] rounded-full text-xs font-bold text-white">EN</div>
-                    <div className="px-3 py-1 text-xs font-bold text-[#666]">RU</div>
                   </div>
                 </div>
 
