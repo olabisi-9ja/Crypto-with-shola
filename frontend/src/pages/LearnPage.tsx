@@ -1,7 +1,7 @@
 import React from 'react';
 import { LandingNavbar } from '../components/LandingNavbar';
 import { LandingFooter } from '../components/LandingFooter';
-import { BookOpen, GraduationCap, Blocks } from 'lucide-react';
+import { BookOpen, GraduationCap, Blocks, LineChart, ArrowRightLeft, Wallet } from 'lucide-react';
 
 export function LearnPage() {
   const lessons = [
@@ -20,9 +20,9 @@ export function LearnPage() {
   ];
 
   const tools = [
-    { title: "Chart Tools", desc: "TradingView for charting and analysis. Essential for any serious trader." },
-    { title: "Exchanges", desc: "Verified platforms with transparent fees and solid security practices." },
-    { title: "Wallets", desc: "Cold storage and mobile wallets that balance convenience with security." }
+    { title: "Chart Tools", desc: "TradingView for charting and analysis. Essential for any serious trader.", Icon: LineChart },
+    { title: "Exchanges", desc: "Verified platforms with transparent fees and solid security practices.", Icon: ArrowRightLeft },
+    { title: "Wallets", desc: "Cold storage and mobile wallets that balance convenience with security.", Icon: Wallet }
   ];
 
   return (
@@ -96,10 +96,10 @@ export function LearnPage() {
           </div>
           <div className="notes-grid" style={{borderColor: 'white'}}>
             {mistakes.map((m, i) => (
-              <div key={i} className="note group text-white hover:text-[var(--ink)]" style={{borderColor: 'var(--line)', border: '1px solid rgba(255,255,255,0.2)', margin: '-1px 0 0 -1px'}}>
-                <span className="text-[var(--orange)] group-hover:text-[var(--ink)] transition-colors">Warning / {String(i+1).padStart(2, '0')}</span>
-                <h3>{m.title}</h3>
-                <p>{m.desc}</p>
+              <div key={i} className="note group text-white hover:text-[#151515]" style={{borderColor: 'var(--line)', border: '1px solid rgba(255,255,255,0.2)', margin: '-1px 0 0 -1px'}}>
+                <span className="text-[var(--orange)] group-hover:text-[#151515] transition-colors">Warning / {String(i+1).padStart(2, '0')}</span>
+                <h3 className="group-hover:text-[#151515] transition-colors">{m.title}</h3>
+                <p className="group-hover:text-[#151515] transition-colors">{m.desc}</p>
               </div>
             ))}
           </div>
@@ -115,6 +115,9 @@ export function LearnPage() {
             {tools.map((t, i) => (
               <div key={i} className="program" style={{border: '1px solid var(--ink)'}}>
                 <span className="program-no">TOOL / {String(i+1).padStart(2, '0')}</span>
+                <div style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 0'}}>
+                  <t.Icon size={80} strokeWidth={1} style={{color: 'var(--ink)'}} />
+                </div>
                 <div>
                   <h3>{t.title}</h3>
                   <p>{t.desc}</p>
