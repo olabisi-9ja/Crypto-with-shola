@@ -39,7 +39,7 @@ export function AboutPage() {
       
       <main id="main">
         {/* Header */}
-        <section className="intro-band" style={{background: 'var(--paper)', color: 'var(--ink)'}}>
+        <section className="intro-band">
           <p className="eyebrow">About Shola</p>
           <h2>Real Name.<br /><span>Real Story.</span></h2>
           <p className="band-copy">Shola started in crypto not as an expert, but as someone frustrated by the noise. He built Crypto With Shola to teach people how to trade with discipline — not hype.</p>

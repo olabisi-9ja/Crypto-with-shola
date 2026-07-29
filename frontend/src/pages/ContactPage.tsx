@@ -23,7 +23,7 @@ export function ContactPage() {
 
       <main id="main">
         {/* Header */}
-        <section className="intro-band" style={{background: 'var(--paper)', color: 'var(--ink)', borderBottom: '1px solid var(--line)'}}>
+        <section className="intro-band" style={{borderBottom: '1px solid var(--line)'}}>
           <p className="eyebrow">Contact</p>
           <h2>Get In<br /><span>Touch.</span></h2>
           <p className="band-copy">Have questions about our signals, structured academy courses, or 1-on-1 mentorship programs? Contact us directly.</p>

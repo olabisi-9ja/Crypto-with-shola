@@ -31,7 +31,7 @@ export function LearnPage() {
 
       <main id="main">
         {/* Header */}
-        <section className="intro-band" style={{background: 'var(--paper)', color: 'var(--ink)'}}>
+        <section className="intro-band">
           <p className="eyebrow">Academy</p>
           <h2>Free Education For<br /><span>Serious Beginners.</span></h2>
           <p className="band-copy">This is a mini academy. Start with crypto basics, move through trading fundamentals, and learn the risk management habits that separate consistent traders from gamblers.</p>
