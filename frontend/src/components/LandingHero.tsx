@@ -58,10 +58,20 @@ export function LandingHero() {
           </p>
           <p className="hero-intro reveal-2">Level up financially with simple, practical crypto basics and trading tutorials. Join a massive active community led by Shola, a certified life coach turned crypto mentor.</p>
           <div className="hero-actions reveal-3">
-            <a className="round-link" href="https://t.me/yourtelegramchannel" target="_blank" rel="noopener noreferrer">
+            <a className="round-link" href="https://t.me/cryptowithshola" target="_blank" rel="noopener noreferrer">
               <span>Join Our Free Telegram</span><b>→</b>
             </a>
             <Link className="text-link" to="/membership">See how membership works <span>↗</span></Link>
+          </div>
+          
+          <div className="mt-8 pt-6 border-t border-black/10 reveal-3">
+             <Link to="/web3" className="inline-flex items-center gap-4 bg-[#151515] text-[#e8ff40] px-6 py-4 rounded-xl hover:bg-[#e8ff40] hover:text-black hover:border-black border border-transparent transition-colors group shadow-lg">
+               <div>
+                 <span className="block text-xs font-mono font-bold uppercase tracking-widest mb-1 text-white group-hover:text-black/70">Premium Subscriptions</span>
+                 <span className="block font-bold">Explore the Immersive Web3 Portal</span>
+               </div>
+               <span className="text-2xl ml-4 transform group-hover:translate-x-2 transition-transform">→</span>
+             </Link>
           </div>
         </div>
       </div>
