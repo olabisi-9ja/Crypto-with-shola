@@ -5,7 +5,7 @@ import { coaches } from '../lib/coaches';
 export function LandingCoaches() {
   return (
     <section className="programs" style={{background: 'var(--acid)', color: 'var(--ink)'}}>
-      <div className="section-heading" style={{borderRight: '1px solid var(--ink)', paddingRight: '40px'}}>
+      <div className="section-heading md:border-r md:pr-10" style={{borderColor: 'var(--ink)'}}>
         <p className="eyebrow" style={{color: 'var(--ink)'}}>Meet Our Leading Crypto Mentor/Coaches</p>
         <h2 style={{color: 'var(--ink)'}}>Guidance from<br />the Best.</h2>
       </div>

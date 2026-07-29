@@ -207,6 +207,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .intro-band { padding: 22vw 7vw; }
   .band-copy { margin-left: 0; }
   .programs { padding: 18vw 7vw; }
+  .section-heading { flex-direction: column; gap: 20px; }
   .program-grid, .portrait-feature, .notes-grid { grid-template-columns: 1fr; }
   .program { min-height: 350px; }
   .portrait-feature { padding: 16vw 10vw; gap: 55px; }
