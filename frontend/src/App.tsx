@@ -12,11 +12,13 @@ import { BlogPostPage } from './pages/BlogPostPage';
 import { CoachPage } from './pages/CoachPage';
 
 import ScrollToTop from './components/ScrollToTop';
+import { FloatingActions } from './components/FloatingActions';
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <FloatingActions />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/about" element={<AboutPage />} />
