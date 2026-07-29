@@ -19,7 +19,7 @@ export const coaches: Coach[] = [
     bio: "Babatunde 'Shola' Olusola is a chemical engineer turned certified life coach and crypto mentor. Leveraging his life coaching background, Shola combines inspirational motivation with practical crypto trading tutorials to help you win both in the market and in life. He has built a 109K+ Telegram Community and has 394K+ X Followers, empowering young individuals to secure their future financially.",
     socials: { 
       twitter: "https://twitter.com/cryptowithshola", 
-      telegram: "https://t.me/yourtelegramchannel" 
+      telegram: "https://t.me/cryptowithshola" 
     }
   },
   {
