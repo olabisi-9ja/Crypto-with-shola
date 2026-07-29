@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { LandingNavbar } from '../components/LandingNavbar';
 import { LandingFooter } from '../components/LandingFooter';
 import { images } from '../lib/images';
-import { Check, HelpCircle, ShieldAlert, ArrowRight } from 'lucide-react';
+import { ShieldAlert } from 'lucide-react';
 
 export function MembershipPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -14,7 +14,8 @@ export function MembershipPage() {
       features: ["Community access", "Selected lessons", "Weekly updates", "Basic support"],
       cta: "Join Now",
       link: "https://t.me/cryptowithshola",
-      popular: false
+      popular: false,
+      color: "var(--paper)"
     },
     {
       name: "Basic Membership",
@@ -22,7 +23,8 @@ export function MembershipPage() {
       features: ["Recordings access", "Watchlists", "Daily alerts", "Email support"],
       cta: "Upgrade",
       link: "#",
-      popular: true
+      popular: true,
+      color: "var(--acid)"
     },
     {
       name: "VIP Membership",
@@ -30,7 +32,8 @@ export function MembershipPage() {
       features: ["Premium signals", "Live class access", "Priority support", "Private room"],
       cta: "Go VIP",
       link: "#",
-      popular: false
+      popular: false,
+      color: "var(--orange)"
     }
   ];
 
@@ -48,141 +51,113 @@ export function MembershipPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#faf9f6] text-[#1c1917] font-sans flex flex-col">
+    <>
       <LandingNavbar />
 
-      {/* Hero */}
-      <header className="relative w-full pt-32 pb-20 bg-[#1c1917] text-[#faf9f6]">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7 text-left">
-            <span className="inline-block text-xs font-black tracking-widest uppercase text-amber-500 mb-3">
-              Membership
-            </span>
-            <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-6">
-              Unlock Premium <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600 font-serif italic font-normal">Insights & Signals.</span>
-            </h1>
-            <p className="text-stone-400 text-lg md:text-xl font-medium leading-relaxed max-w-xl">
-              Choose the tier that fits your experience level. Every tier includes access to our core educational content and trading community.
-            </p>
-          </div>
-          <div className="lg:col-span-5 flex justify-center">
-            <div className="w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-stone-800 shadow-2xl">
-              <img src={images.sholaSuit} alt="Shola" className="w-full h-full object-cover" />
-            </div>
-          </div>
-        </div>
-      </header>
+      <main id="main">
+        {/* Header */}
+        <section className="intro-band" style={{background: 'var(--ink)', color: 'white'}}>
+          <p className="eyebrow" style={{color: 'var(--acid)'}}>Membership</p>
+          <h2 style={{color: 'white'}}>Unlock Premium<br /><span style={{color: 'var(--orange)'}}>Insights.</span></h2>
+          <p className="band-copy">Choose the tier that fits your experience level. Every tier includes access to our core educational content and trading community.</p>
+        </section>
 
-      {/* Pricing Tiers */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-4">Choose your edge</h2>
-            <p className="text-stone-600">Multiple tiers so you only pay for the level of support you actually need.</p>
+        {/* Pricing Tiers */}
+        <section className="programs" style={{background: 'var(--paper)'}}>
+          <div className="section-heading">
+            <p className="eyebrow">Plans</p>
+            <h2>Choose<br />your edge.</h2>
           </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+          <div className="program-grid">
             {tiers.map((t, i) => (
-              <div 
-                key={i} 
-                className={`bg-stone-50 border-2 p-8 rounded-3xl flex flex-col justify-between relative shadow-sm hover:shadow-lg transition-all ${
-                  t.popular ? 'border-amber-600 lg:scale-105' : 'border-stone-200'
-                }`}
-              >
-                {t.popular && (
-                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-600 text-white text-xs font-black px-4 py-1 rounded-full uppercase tracking-wider">
-                    Most Popular
-                  </span>
-                )}
-                <div>
-                  <h3 className="font-bold text-xl mb-4">{t.name}</h3>
-                  <div className="flex items-baseline gap-1 mb-8">
-                    <span className="text-4xl font-black">${t.price}</span>
-                    <span className="text-stone-500 text-sm">/month</span>
+              <div key={i} className="program" style={{background: t.color, borderColor: 'var(--ink)'}}>
+                {t.popular && <span style={{position: 'absolute', top: '-15px', right: '30px', background: 'var(--ink)', color: 'white', padding: '6px 12px', font: '11px var(--mono)', textTransform: 'uppercase'}}>Most Popular</span>}
+                <span className="program-no">TIER / 0{i+1}</span>
+                <div style={{marginTop: '40px'}}>
+                  <h3 style={{fontSize: 'clamp(2rem, 3vw, 3.5rem)'}}>{t.name}</h3>
+                  <div style={{display: 'flex', alignItems: 'baseline', gap: '5px', marginBottom: '30px'}}>
+                    <span style={{fontSize: '4rem', fontFamily: 'var(--display)', fontWeight: 900, letterSpacing: '-0.05em'}}>${t.price}</span>
+                    <span style={{font: '14px var(--mono)', opacity: 0.7}}>/month</span>
                   </div>
-                  <ul className="space-y-4 border-t border-stone-200 pt-6 mb-8 text-left">
+                  
+                  <ul style={{listStyle: 'none', padding: 0, margin: '0 0 40px 0', borderTop: '1px solid var(--ink)', paddingTop: '30px'}}>
                     {t.features.map((f, idx) => (
-                      <li key={idx} className="flex items-center gap-3">
-                        <Check className="w-4 h-4 text-amber-600 shrink-0" />
-                        <span className="text-sm text-stone-700 font-medium">{f}</span>
+                      <li key={idx} style={{font: '15px var(--sans)', marginBottom: '15px', display: 'flex', gap: '10px', alignItems: 'center'}}>
+                        <span style={{color: 'var(--ink)'}}>✓</span> {f}
                       </li>
                     ))}
                   </ul>
                 </div>
+                
                 <a 
                   href={t.link} 
                   onClick={() => t.link === '#' && alert('Payment flow opening...')}
-                  className={`w-full py-4 rounded-full font-bold text-center flex items-center justify-center gap-2 ${
-                    t.popular ? 'bg-amber-600 text-white hover:bg-amber-500' : 'bg-stone-100 text-[#1c1917] hover:bg-stone-200'
-                  }`}
+                  className="round-link"
+                  style={{border: 'none', background: 'var(--ink)', color: 'white', padding: '10px 10px 10px 22px', alignSelf: 'flex-start'}}
                 >
-                  {t.cta} <ArrowRight className="w-4 h-4" />
+                  <span>{t.cta}</span><b style={{background: 'var(--acid)', color: 'var(--ink)'}}>→</b>
                 </a>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* What it includes */}
-      <section className="py-24 bg-[#1c1917] text-[#faf9f6]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-xl mx-auto mb-16">
-            <h2 className="text-3xl font-black tracking-tight mb-4">What membership includes</h2>
-            <p className="text-stone-400">Everything serious traders need to construct setups and maintain risk rules.</p>
+        {/* What it includes */}
+        <section className="notes-section" style={{borderTop: '1px solid var(--line)', background: 'var(--ink)', color: 'white'}}>
+          <div className="notes-top">
+            <div>
+              <p className="eyebrow" style={{color: 'white'}}>Features</p>
+              <h2 style={{color: 'white'}}>What's<br />included.</h2>
+            </div>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="notes-grid" style={{borderColor: 'white'}}>
             {includes.map((inc, i) => (
-              <div key={i} className="bg-stone-900 border border-stone-850 p-8 rounded-3xl text-left">
-                <h4 className="font-bold text-lg mb-3 text-amber-500">{inc.title}</h4>
-                <p className="text-stone-400 text-sm leading-relaxed">{inc.desc}</p>
+              <div key={i} className="note" style={{borderColor: 'var(--line)', border: '1px solid rgba(255,255,255,0.2)', margin: '-1px 0 0 -1px'}}>
+                <span style={{color: 'var(--orange)'}}>0{i+1} / Feature</span>
+                <h3 style={{color: 'white'}}>{inc.title}</h3>
+                <p style={{color: 'white'}}>{inc.desc}</p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* FAQ */}
-      <section className="py-24 bg-white">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-3xl font-black tracking-tight text-center mb-12">Membership FAQ</h2>
-          <div className="space-y-4">
+        {/* FAQ items */}
+        <section style={{padding: '7vw 6vw', background: 'var(--acid)', display: 'grid', gridTemplateColumns: '1fr', gap: '-1px', borderTop: '1px solid var(--ink)'}}>
+          <div style={{maxWidth: '800px', margin: '0 auto', width: '100%'}}>
+            <p className="eyebrow" style={{marginBottom: '40px', textAlign: 'center'}}>Membership FAQ</p>
             {faqs.map((faq, i) => (
-              <div key={i} className="border border-stone-200 rounded-2xl overflow-hidden bg-stone-50">
+              <div key={i} style={{border: '1px solid var(--ink)', marginBottom: '-1px', background: openFaq === i ? 'var(--orange)' : 'transparent', transition: 'background 0.2s'}}>
                 <button 
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full p-6 text-left font-bold flex justify-between items-center"
+                  style={{width: '100%', padding: '30px', textAlign: 'left', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'none', border: 'none', cursor: 'pointer', font: 'inherit', color: 'var(--ink)'}}
                 >
-                  <span>{faq.q}</span>
-                  <HelpCircle className="w-5 h-5 text-amber-600 shrink-0" />
+                  <h3 style={{fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', margin: 0, fontFamily: 'var(--display)'}}>{faq.q}</h3>
+                  <span style={{fontFamily: 'var(--mono)', fontSize: '24px'}}>{openFaq === i ? '—' : '+'}</span>
                 </button>
                 {openFaq === i && (
-                  <div className="p-6 border-t border-stone-200 text-stone-600 text-sm leading-relaxed bg-white">
-                    {faq.a}
+                  <div style={{padding: '0 30px 30px', color: 'var(--ink)'}}>
+                    <p style={{fontSize: '16px', lineHeight: 1.6, margin: 0}}>{faq.a}</p>
                   </div>
                 )}
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Disclaimer */}
-      <section className="py-20 bg-stone-100 text-center border-t border-stone-200">
-        <div className="max-w-xl mx-auto px-6">
-          <div className="w-10 h-10 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-700 mx-auto mb-4">
-            <ShieldAlert className="w-5 h-5" />
+        {/* Disclaimer */}
+        <section className="final-home" style={{background: 'var(--paper)', color: 'var(--ink)', padding: '5vw 12vw', minHeight: 'auto'}}>
+          <div style={{display: 'flex', gap: '20px', alignItems: 'flex-start'}}>
+            <ShieldAlert size={32} color="var(--orange)" style={{flexShrink: 0}} />
+            <div>
+              <h2 style={{fontSize: '2rem', marginBottom: '15px'}}>Risk Disclaimer</h2>
+              <p style={{maxWidth: '600px', fontSize: '15px', lineHeight: '1.6'}}>Crypto involves significant risk. No profit is guaranteed. Past results do not guarantee future performance. This site is for educational purposes only and does not constitute financial advice.</p>
+            </div>
           </div>
-          <h2 className="text-2xl font-black mb-3">Risk Disclaimer</h2>
-          <p className="text-stone-600 text-sm leading-relaxed">
-            Crypto involves significant risk. No profit is guaranteed. Past results do not guarantee future performance. This site is for educational purposes only and does not constitute financial advice.
-          </p>
-        </div>
-      </section>
+        </section>
+
+      </main>
 
       <LandingFooter />
-    </div>
+    </>
   );
 }

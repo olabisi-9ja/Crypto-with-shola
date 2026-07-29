@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { LandingNavbar } from '../components/LandingNavbar';
 import { LandingFooter } from '../components/LandingFooter';
-import { Mail, MessageCircle, Send, ShieldAlert } from 'lucide-react';
+import { Mail, MessageCircle, Send } from 'lucide-react';
 
 export function ContactPage() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -18,119 +18,101 @@ export function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#faf9f6] text-[#1c1917] font-sans flex flex-col">
+    <>
       <LandingNavbar />
 
-      {/* Hero */}
-      <header className="relative w-full pt-32 pb-20 bg-stone-100 border-b border-stone-200">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <span className="inline-block text-xs font-black tracking-widest uppercase text-amber-600 mb-3">
-            Contact
-          </span>
-          <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-6">
-            Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-800 font-serif italic font-normal">Touch.</span>
-          </h1>
-          <p className="text-stone-700 text-lg md:text-xl font-medium leading-relaxed max-w-xl mx-auto">
-            Have questions about our signals, structured academy courses, or 1-on-1 mentorship programs? Contact us directly.
-          </p>
-        </div>
-      </header>
+      <main id="main">
+        {/* Header */}
+        <section className="intro-band" style={{background: 'var(--paper)', color: 'var(--ink)', borderBottom: '1px solid var(--line)'}}>
+          <p className="eyebrow">Contact</p>
+          <h2>Get In<br /><span>Touch.</span></h2>
+          <p className="band-copy">Have questions about our signals, structured academy courses, or 1-on-1 mentorship programs? Contact us directly.</p>
+        </section>
 
-      {/* Grid Layout */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16">
+        {/* Layout */}
+        <section className="portrait-feature" style={{background: 'var(--acid)', padding: '0', alignItems: 'stretch'}}>
           
-          {/* Support Handles */}
-          <div className="lg:col-span-5 flex flex-col justify-start text-left">
-            <h3 className="text-2xl font-black mb-6">Direct Channels</h3>
-            <p className="text-stone-600 leading-relaxed mb-8">
-              We respond fastest to Telegram inquiries. Choose the handle that matches your topic:
-            </p>
-
-            <div className="space-y-6 mb-12">
-              <a 
-                href="https://t.me/cryptowithshola" 
-                target="_blank" 
-                rel="noreferrer"
-                className="flex items-start gap-4 bg-stone-50 border border-stone-200 p-6 rounded-3xl hover:border-amber-650/30 transition-colors"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-700 shrink-0">
-                  <MessageCircle className="w-6 h-6" />
+          <div className="feature-copy" style={{padding: '7vw 6vw', borderRight: '1px solid var(--ink)', background: 'var(--ink)', color: 'white'}}>
+            <p className="eyebrow" style={{color: 'white'}}>Direct Channels</p>
+            <h2 style={{color: 'white'}}>We respond<br />fastest to<br />Telegram.</h2>
+            
+            <div style={{marginTop: '40px', display: 'flex', flexDirection: 'column', gap: '20px'}}>
+              <a href="https://t.me/cryptowithshola" target="_blank" rel="noreferrer" style={{display: 'block', padding: '24px', border: '1px solid var(--line)', color: 'white', textDecoration: 'none'}}>
+                <div style={{display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '10px'}}>
+                  <MessageCircle size={24} color="var(--orange)" />
+                  <h3 style={{fontSize: '1.2rem', margin: 0}}>Telegram Community</h3>
                 </div>
-                <div>
-                  <h4 className="font-bold text-base mb-1">Telegram Community</h4>
-                  <p className="text-sm text-stone-500">Join our main public channel containing free market updates.</p>
-                </div>
+                <p style={{fontSize: '14px', margin: 0, opacity: 0.8}}>Join our main public channel containing free market updates.</p>
               </a>
 
-              <div className="flex items-start gap-4 bg-stone-50 border border-stone-200 p-6 rounded-3xl">
-                <div className="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-700 shrink-0">
-                  <Mail className="w-6 h-6" />
+              <div style={{display: 'block', padding: '24px', border: '1px solid var(--line)', color: 'white'}}>
+                <div style={{display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '10px'}}>
+                  <Mail size={24} color="var(--orange)" />
+                  <h3 style={{fontSize: '1.2rem', margin: 0}}>Support Email</h3>
                 </div>
-                <div>
-                  <h4 className="font-bold text-base mb-1">Support Email</h4>
-                  <p className="text-sm text-stone-500">support@cryptowithshola.com</p>
-                  <p className="text-xs text-stone-400 mt-1">General support replies take up to 24-48 business hours.</p>
-                </div>
+                <p style={{fontSize: '14px', margin: 0, opacity: 0.8}}>support@cryptowithshola.com</p>
+                <p style={{fontSize: '11px', fontFamily: 'var(--mono)', marginTop: '10px', textTransform: 'uppercase', opacity: 0.5}}>General support replies take up to 24-48 business hours.</p>
               </div>
             </div>
           </div>
 
-          {/* Form */}
-          <div className="lg:col-span-7 bg-stone-50 border border-stone-200 p-8 md:p-12 rounded-3xl shadow-sm text-left">
-            <h3 className="text-2xl font-black mb-6">Send a Message</h3>
+          <div className="feature-copy" style={{padding: '7vw 6vw', background: 'var(--paper)', color: 'var(--ink)'}}>
+            <p className="eyebrow">Send a Message</p>
+            <h2>Drop us<br />a line.</h2>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} style={{marginTop: '40px', display: 'flex', flexDirection: 'column', gap: '25px'}}>
               <div>
-                <label className="block text-sm font-bold text-stone-700 mb-2">Name</label>
+                <label style={{display: 'block', font: '13px var(--mono)', textTransform: 'uppercase', marginBottom: '10px', fontWeight: 500}}>Name</label>
                 <input 
                   type="text" 
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   placeholder="Your full name"
-                  className="w-full px-4 py-3 bg-white border border-stone-200 rounded-xl focus:border-amber-600 focus:outline-none transition-colors text-sm font-medium"
+                  style={{width: '100%', padding: '16px', background: 'transparent', border: '1px solid var(--ink)', font: '16px var(--sans)', outline: 'none'}}
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-bold text-stone-700 mb-2">Email</label>
+                <label style={{display: 'block', font: '13px var(--mono)', textTransform: 'uppercase', marginBottom: '10px', fontWeight: 500}}>Email</label>
                 <input 
                   type="email" 
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder="name@example.com"
-                  className="w-full px-4 py-3 bg-white border border-stone-200 rounded-xl focus:border-amber-600 focus:outline-none transition-colors text-sm font-medium"
+                  style={{width: '100%', padding: '16px', background: 'transparent', border: '1px solid var(--ink)', font: '16px var(--sans)', outline: 'none'}}
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-bold text-stone-700 mb-2">Message</label>
+                <label style={{display: 'block', font: '13px var(--mono)', textTransform: 'uppercase', marginBottom: '10px', fontWeight: 500}}>Message</label>
                 <textarea 
                   rows={5}
                   required
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Describe your inquiry..."
-                  className="w-full px-4 py-3 bg-white border border-stone-200 rounded-xl focus:border-amber-600 focus:outline-none transition-colors text-sm font-medium resize-none"
+                  style={{width: '100%', padding: '16px', background: 'transparent', border: '1px solid var(--ink)', font: '16px var(--sans)', outline: 'none', resize: 'none'}}
                 />
               </div>
 
               <button 
                 type="submit"
                 disabled={submitted}
-                className="w-full py-4.5 bg-[#1c1917] hover:bg-stone-800 text-white rounded-full font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-colors disabled:opacity-50"
+                className="round-link"
+                style={{border: 'none', cursor: 'pointer', background: 'var(--ink)', color: 'white', padding: '10px 10px 10px 22px'}}
               >
-                {submitted ? 'Sending...' : 'Send Message'} <Send className="w-4 h-4" />
+                <span>{submitted ? 'Sending...' : 'Send Message'}</span>
+                <b style={{background: 'var(--acid)', color: 'var(--ink)'}}><Send size={16} /></b>
               </button>
             </form>
           </div>
-
-        </div>
-      </section>
+          
+        </section>
+      </main>
 
       <LandingFooter />
-    </div>
+    </>
   );
 }

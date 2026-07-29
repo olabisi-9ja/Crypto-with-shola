@@ -9,6 +9,7 @@ import { Web3Page } from './pages/Web3Page';
 import { FAQPage } from './pages/FAQPage';
 import { BlogPage } from './pages/BlogPage';
 import { BlogPostPage } from './pages/BlogPostPage';
+import { CoachPage } from './pages/CoachPage';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:id" element={<BlogPostPage />} />
+        <Route path="/coach/:id" element={<CoachPage />} />
       </Routes>
     </Router>
   );

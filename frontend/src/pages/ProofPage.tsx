@@ -2,7 +2,7 @@ import React from 'react';
 import { LandingNavbar } from '../components/LandingNavbar';
 import { LandingFooter } from '../components/LandingFooter';
 import { images } from '../lib/images';
-import { Check, X, ShieldCheck, HelpCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function ProofPage() {
   const stats = [
@@ -19,140 +19,109 @@ export function ProofPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#faf9f6] text-[#1c1917] font-sans flex flex-col">
+    <>
       <LandingNavbar />
 
-      {/* Hero */}
-      <header className="relative w-full pt-32 pb-20 bg-stone-100 border-b border-stone-200">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7 text-left">
-            <span className="inline-block text-xs font-black tracking-widest uppercase text-amber-600 mb-3">
-              Performance Track
-            </span>
-            <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-6">
-              Data-Driven Results.<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-800 font-serif italic font-normal">No Hype.</span>
-            </h1>
-            <p className="text-stone-700 text-lg md:text-xl font-medium leading-relaxed max-w-xl">
-              Transparency is our core value. We show verified wins, transparent losses, and the lessons that come from both.
-            </p>
+      <main id="main">
+        {/* Header */}
+        <section className="intro-band" style={{background: 'var(--paper)', color: 'var(--ink)'}}>
+          <p className="eyebrow">Performance Track</p>
+          <h2>Data-Driven<br /><span>Results.</span></h2>
+          <p className="band-copy">Transparency is our core value. We show verified wins, transparent losses, and the lessons that come from both.</p>
+        </section>
+
+        {/* Image Feature */}
+        <section className="portrait-feature" style={{background: 'var(--ink)', padding: '0 10vw'}}>
+          <div className="feature-image" style={{paddingTop: '7vw'}}>
+            <img src={images.telegramBanner} alt="Proof chart" style={{filter: 'grayscale(1) contrast(1.2)'}} />
           </div>
-          <div className="lg:col-span-5 flex justify-center">
-            <div className="w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-stone-200 aspect-[4/3]">
-              <img src={images.telegramBanner} alt="Proof chart" className="w-full h-full object-cover" />
+          <div className="feature-copy" style={{color: 'white'}}>
+            <p className="eyebrow" style={{color: 'var(--orange)'}}>Proof</p>
+            <h2 style={{color: 'white'}}>No Hype.</h2>
+            <p style={{color: 'white'}}>We don't sell dreams, we execute plans. Everything here is based on real setups and verified outcomes.</p>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section style={{padding: '7vw 6vw', background: 'var(--acid)', borderTop: '1px solid var(--ink)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '30px', textAlign: 'center'}}>
+          {stats.map((s, i) => (
+            <div key={i} style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
+              <span style={{fontSize: 'clamp(3rem, 5vw, 4.5rem)', fontFamily: 'var(--display)', fontWeight: 900, lineHeight: 1}}>{s.value}</span>
+              <span style={{font: '14px var(--mono)', textTransform: 'uppercase'}}>{s.label}</span>
+            </div>
+          ))}
+        </section>
+
+        {/* Transparent Losses */}
+        <section className="notes-section" style={{borderTop: '1px solid var(--line)', background: 'var(--ink)', color: 'white'}}>
+          <div className="notes-top">
+            <div>
+              <p className="eyebrow" style={{color: 'white'}}>Honesty</p>
+              <h2 style={{color: 'white'}}>Transparent<br />Losses.</h2>
             </div>
           </div>
-        </div>
-      </header>
-
-      {/* Stats Section */}
-      <section className="py-24 bg-white border-b border-stone-200">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-y md:divide-y-0 md:divide-x divide-stone-200 text-center">
-            {stats.map((s, i) => (
-              <div key={i} className="flex flex-col pt-8 md:pt-0">
-                <span className="text-4xl md:text-5xl font-black text-amber-700 mb-2">{s.value}</span>
-                <span className="text-stone-500 text-sm font-semibold">{s.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Transparent Losses */}
-      <section className="py-24 bg-[#1c1917] text-[#faf9f6]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-4 text-[#faf9f6]">Transparent Losses</h2>
-            <p className="text-stone-400">
-              Every trader has losses. We publish monthly recaps including setups that failed with breakdown explanations.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="notes-grid" style={{borderColor: 'white'}}>
             {recaps.map((r, i) => (
-              <div key={i} className="bg-stone-900 border border-stone-850 p-8 rounded-3xl text-left flex flex-col justify-between">
-                <div>
-                  <div className="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 mb-6 font-bold">
-                    <X className="w-4 h-4" />
-                  </div>
-                  <h4 className="font-bold text-lg mb-2 text-stone-200">{r.month}</h4>
-                  <p className="text-stone-400 text-sm leading-relaxed">{r.desc}</p>
-                </div>
+              <div key={i} className="note" style={{borderColor: 'var(--line)', border: '1px solid rgba(255,255,255,0.2)', margin: '-1px 0 0 -1px'}}>
+                <span style={{color: 'var(--orange)'}}>LOSS / {String(i+1).padStart(2, '0')}</span>
+                <h3 style={{color: 'white'}}>{r.month}</h3>
+                <p style={{color: 'white'}}>{r.desc}</p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Before / After Progress */}
-      <section className="py-24 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center max-w-xl mx-auto mb-16">
-            <h2 className="text-3xl font-black tracking-tight mb-4">Before / After Progress</h2>
-            <p className="text-stone-600">
-              Many students start with random setups and finish with custom, strict, and independent systems.
-            </p>
+        {/* Before / After Progress */}
+        <section className="programs" style={{background: 'var(--paper)'}}>
+          <div className="section-heading">
+            <p className="eyebrow">Transformation</p>
+            <h2>Before & After<br />Progress.</h2>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-            {/* Before */}
-            <div className="bg-stone-50 border-2 border-red-500/10 p-8 rounded-3xl text-left">
-              <h3 className="font-black text-xl mb-6 text-red-700 flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span> Before Mentorship
-              </h3>
-              <ul className="space-y-4">
-                {[
-                  "Random trades with no clear system rules",
-                  "No risk management limits (wiping accounts)",
-                  "Emotional entries and panic-driven exits",
-                  "Chasing social media noise and random calls"
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-3">
-                    <X className="w-5 h-5 text-red-500 shrink-0" />
-                    <span className="text-sm text-stone-600 font-medium">{item}</span>
-                  </li>
-                ))}
-              </ul>
+          <div className="program-grid">
+            <div className="program" style={{border: '1px solid var(--ink)', background: 'white'}}>
+              <span className="program-no">BEFORE</span>
+              <div style={{marginTop: '20px'}}>
+                <h3>Mentorship</h3>
+                <ul style={{listStyle: 'none', padding: 0, margin: '20px 0', opacity: 0.8}}>
+                  <li style={{marginBottom: '10px'}}>✗ Random trades with no clear system</li>
+                  <li style={{marginBottom: '10px'}}>✗ No risk management limits</li>
+                  <li style={{marginBottom: '10px'}}>✗ Emotional entries and panic exits</li>
+                  <li style={{marginBottom: '10px'}}>✗ Chasing social media noise</li>
+                </ul>
+              </div>
             </div>
-
-            {/* After */}
-            <div className="bg-stone-50 border-2 border-emerald-500/10 p-8 rounded-3xl text-left">
-              <h3 className="font-black text-xl mb-6 text-emerald-700 flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> After Mentorship
-              </h3>
-              <ul className="space-y-4">
-                {[
-                  "Structured, clean daily trading routines",
-                  "Strict, clear position sizing formulas",
-                  "Pre-planned setups, entries, and invalidations",
-                  "Independent chart analyses and technical logs"
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-emerald-500 shrink-0" />
-                    <span className="text-sm text-stone-600 font-medium">{item}</span>
-                  </li>
-                ))}
-              </ul>
+            
+            <div className="program program-dark">
+              <span className="program-no">AFTER</span>
+              <div style={{marginTop: '20px'}}>
+                <h3>Mentorship</h3>
+                <ul style={{listStyle: 'none', padding: 0, margin: '20px 0'}}>
+                  <li style={{marginBottom: '10px'}}>✓ Structured daily trading routines</li>
+                  <li style={{marginBottom: '10px'}}>✓ Strict position sizing formulas</li>
+                  <li style={{marginBottom: '10px'}}>✓ Pre-planned setups and invalidations</li>
+                  <li style={{marginBottom: '10px'}}>✓ Independent technical logs</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-stone-100 text-center border-t border-stone-200">
-        <div className="max-w-xl mx-auto px-6">
-          <h2 className="text-3xl font-black tracking-tight mb-4">Ready for verified signals?</h2>
-          <p className="text-stone-600 mb-8 leading-relaxed">
-            Unlocks full track-record lists, daily VIP setups, live chart sessions, and Discord channels.
-          </p>
-          <a href="/membership" className="px-8 py-4 bg-[#1c1917] text-white rounded-full font-bold shadow-md hover:bg-stone-800 transition-colors">
-            See Membership Tiers
-          </a>
-        </div>
-      </section>
+        {/* CTA */}
+        <section className="final-home" style={{background: 'var(--orange)', color: 'var(--ink)'}}>
+          <p className="eyebrow">Next steps</p>
+          <h2>Ready for<br />verified signals?</h2>
+          <p style={{maxWidth: '400px', fontSize: '17px', marginBottom: '40px', lineHeight: '1.5'}}>Unlocks full track-record lists, daily VIP setups, live chart sessions, and Discord channels.</p>
+          
+          <Link to="/membership" className="round-link light" style={{background: 'var(--ink)', color: 'white'}}>
+            <span>See Memberships</span><b style={{background: 'var(--acid)', color: 'var(--ink)'}}>→</b>
+          </Link>
+          
+          <div className="final-star" style={{color: 'var(--acid)'}}>✦</div>
+        </section>
+
+      </main>
 
       <LandingFooter />
-    </div>
+    </>
   );
 }

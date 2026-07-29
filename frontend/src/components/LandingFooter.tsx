@@ -1,72 +1,98 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck } from 'lucide-react';
+import { Send, Mail } from 'lucide-react';
 
 export function LandingFooter() {
   return (
-    <>
-      {/* Why Trust Section */}
-      <section className="w-full py-24 bg-secondary border-y border-border">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-6">About CryptoWithShola</h2>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              Founded by Babatunde “Shola” Olusola in 2022, CryptoWithShola blends life coaching with beginner-friendly crypto education. Our mission is to empower young people to level up financially through trading basics and community support.
-            </p>
-            <ul className="space-y-4">
-              {[
-                "Certified life coach turned crypto mentor with a massive verified following.",
-                "Practical tutorials, daily signals, and motivational Q&A sessions.",
-                "Expanding education to include DeFi, NFTs, and crypto security.",
-                "Disclaimer: Crypto involves risk. Educational content is not financial advice."
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-4">
-                  <ShieldCheck className="w-6 h-6 text-primary shrink-0" />
-                  <span className="font-medium text-foreground">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="bg-card border border-border p-12 rounded-3xl shadow-xl flex flex-col items-center justify-center text-center">
-            <h3 className="text-2xl font-bold mb-4">Start your journey today</h3>
-            <p className="text-muted-foreground mb-8">
-              Join thousands of traders learning to navigate the crypto markets with discipline.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-               <Link to="/membership" className="px-8 py-4 bg-foreground text-background rounded-full font-bold hover:bg-foreground/90 transition-colors">
-                 Join Membership
-               </Link>
-               <Link to="/contact" className="px-8 py-4 bg-transparent border border-border text-foreground rounded-full font-bold hover:bg-secondary transition-colors">
-                 Join Free Telegram
-               </Link>
-            </div>
+    <footer style={{
+      background: 'var(--ink)', 
+      color: 'white', 
+      padding: '80px 6vw 40px',
+      fontFamily: 'var(--sans)',
+      borderTop: '1px solid rgba(255,255,255,0.1)'
+    }}>
+      <div style={{
+        display: 'grid', 
+        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
+        gap: '40px',
+        marginBottom: '60px'
+      }}>
+        {/* Brand Section */}
+        <div style={{display: 'flex', flexDirection: 'column', gap: '20px'}}>
+          <Link to="/" style={{fontFamily: 'var(--display)', fontSize: '2.5rem', fontWeight: 'bold', color: 'var(--orange)', textDecoration: 'none', lineHeight: '1'}}>
+            CWS.
+          </Link>
+          <p style={{color: 'rgba(255,255,255,0.7)', lineHeight: '1.6', fontSize: '0.95rem', maxWidth: '300px'}}>
+            Simplifying your journey through the crypto noise. Expert guidance, daily signals, and a community built for the real world.
+          </p>
+          <div style={{display: 'flex', gap: '15px', marginTop: '10px'}}>
+            <a href="https://twitter.com/cryptowithshola" target="_blank" rel="noreferrer" style={{color: 'white', opacity: 0.8, transition: 'all 0.2s'}} className="hover-orange">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+            </a>
+            <a href="https://t.me/yourtelegramchannel" target="_blank" rel="noreferrer" style={{color: 'white', opacity: 0.8, transition: 'all 0.2s'}} className="hover-orange">
+              <Send size={24} />
+            </a>
+            <a href="mailto:cryptowithshola@gmail.com" style={{color: 'white', opacity: 0.8, transition: 'all 0.2s'}} className="hover-orange">
+              <Mail size={24} />
+            </a>
           </div>
         </div>
-      </section>
 
-      {/* Actual Footer */}
-      <footer className="w-full bg-background py-12">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-3">
-            <span className="font-black text-2xl tracking-tighter bg-gradient-to-r from-amber-600 via-yellow-400 to-amber-600 bg-[length:200%_auto] text-transparent bg-clip-text animate-text-gradient">
-              CWS
-            </span>
-            <span className="font-bold tracking-tight">Crypto with Shola</span>
-          </div>
-          
-          <div className="flex items-center gap-6 text-sm text-muted-foreground font-medium">
-            <Link to="/about" className="hover:text-foreground">About</Link>
-            <Link to="/learn" className="hover:text-foreground">Learn</Link>
-            <Link to="/membership" className="hover:text-foreground">Membership</Link>
-            <Link to="/blog" className="hover:text-foreground">Blog</Link>
-            <Link to="/faq" className="hover:text-foreground">FAQ</Link>
-          </div>
-
-          <div className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Crypto with Shola. All rights reserved.
-          </div>
+        {/* Explore Links */}
+        <div>
+          <h4 style={{fontSize: '1rem', marginBottom: '20px', fontFamily: 'var(--mono)', textTransform: 'uppercase', letterSpacing: '1px', color: 'var(--orange)'}}>Explore</h4>
+          <ul style={{listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px'}}>
+            <li><Link to="/learn" style={{color: 'white', textDecoration: 'none', opacity: 0.8, transition: 'all 0.2s'}} className="hover-orange">Learn Crypto</Link></li>
+            <li><Link to="/membership" style={{color: 'white', textDecoration: 'none', opacity: 0.8, transition: 'all 0.2s'}} className="hover-orange">Membership Plans</Link></li>
+            <li><Link to="/proof" style={{color: 'white', textDecoration: 'none', opacity: 0.8, transition: 'all 0.2s'}} className="hover-orange">Proof of Results</Link></li>
+            <li><Link to="/blog" style={{color: 'white', textDecoration: 'none', opacity: 0.8, transition: 'all 0.2s'}} className="hover-orange">Our Blog</Link></li>
+          </ul>
         </div>
-      </footer>
-    </>
+
+        {/* Support Links */}
+        <div>
+          <h4 style={{fontSize: '1rem', marginBottom: '20px', fontFamily: 'var(--mono)', textTransform: 'uppercase', letterSpacing: '1px', color: 'var(--orange)'}}>Support</h4>
+          <ul style={{listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px'}}>
+            <li><Link to="/faq" style={{color: 'white', textDecoration: 'none', opacity: 0.8, transition: 'all 0.2s'}} className="hover-orange">FAQs</Link></li>
+            <li><Link to="/contact" style={{color: 'white', textDecoration: 'none', opacity: 0.8, transition: 'all 0.2s'}} className="hover-orange">Contact Us</Link></li>
+            <li><a href="https://t.me/yourtelegramchannel" target="_blank" rel="noreferrer" style={{color: 'white', textDecoration: 'none', opacity: 0.8, transition: 'all 0.2s'}} className="hover-orange">Join Telegram</a></li>
+          </ul>
+        </div>
+
+        {/* Contact Info */}
+        <div>
+          <h4 style={{fontSize: '1rem', marginBottom: '20px', fontFamily: 'var(--mono)', textTransform: 'uppercase', letterSpacing: '1px', color: 'var(--orange)'}}>Get in Touch</h4>
+          <p style={{color: 'rgba(255,255,255,0.7)', marginBottom: '10px', fontSize: '0.95rem'}}>
+            Have questions? Reach out directly.
+          </p>
+          <a href="mailto:cryptowithshola@gmail.com" style={{color: 'white', fontWeight: 'bold', fontSize: '1.1rem', textDecoration: 'underline', transition: 'all 0.2s'}} className="hover-orange">
+            cryptowithshola@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <div style={{
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        alignItems: 'center', 
+        flexWrap: 'wrap', 
+        gap: '20px',
+        borderTop: '1px solid rgba(255,255,255,0.1)', 
+        paddingTop: '30px',
+        fontSize: '0.85rem',
+        color: 'rgba(255,255,255,0.5)'
+      }}>
+        <div>© {new Date().getFullYear()} Crypto With Shola. All rights reserved.</div>
+        <div style={{display: 'flex', gap: '20px'}}>
+          <span style={{cursor: 'pointer', transition: 'all 0.2s'}} className="hover-orange">Privacy Policy</span>
+          <span style={{cursor: 'pointer', transition: 'all 0.2s'}} className="hover-orange">Terms of Service</span>
+          <span style={{cursor: 'pointer', transition: 'all 0.2s'}} className="hover-orange">Disclaimer</span>
+        </div>
+      </div>
+      
+      <style>{`
+        .hover-orange:hover { opacity: 1 !important; color: var(--orange) !important; text-decoration: none !important; }
+      `}</style>
+    </footer>
   );
 }

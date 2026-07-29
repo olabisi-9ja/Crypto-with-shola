@@ -1,77 +1,95 @@
 import React from 'react';
-import { TrendingUp, BrainCircuit, Users, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Send, PlayCircle, TrendingUp } from 'lucide-react';
 
 export function LandingFeatures() {
   return (
-    <section className="w-full py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-16">
-          <h2 className="text-sm font-bold text-primary uppercase tracking-wider mb-2">What we provide</h2>
-          <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-4">Built on discipline<br />and proven methods.</h3>
-          <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
-            Crypto can build paths to leveling up financially. Our approach is beginner-friendly and practical. We provide the tutorials, the trading signals, and the community you need to start getting profits.
-          </p>
+    <>
+      {/* Merged: Follow the Process */}
+      <section className="programs" style={{background: 'var(--paper)', borderBottom: '1px solid var(--ink)'}}>
+        <div className="section-heading" style={{display: 'block', marginBottom: '60px'}}>
+          <p className="eyebrow" style={{color: 'var(--orange)'}}>Follow the Process</p>
+          <div style={{maxWidth: '800px', marginTop: '20px'}}>
+            <h2 style={{fontSize: 'clamp(2rem, 4vw, 3rem)', lineHeight: '1.1'}}>If you are new to crypto, we advise you start learning everything on this site and our Telegram channel...</h2>
+            <p style={{marginTop: '20px', fontWeight: 'bold', fontSize: '1.1rem'}}>So at this right here, watch the short guide keep on going with full, take the classes with follow the process.</p>
+          </div>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          
-          {/* Live Trading - Spans 2 columns */}
-          <div className="md:col-span-2 bg-primary text-primary-foreground border border-border p-8 rounded-3xl shadow-sm relative overflow-hidden group hover:opacity-95 transition-opacity flex flex-col justify-between">
-            <div>
-              <div className="w-12 h-12 rounded-xl bg-background/20 flex items-center justify-center mb-6">
-                <TrendingUp className="w-6 h-6 text-primary-foreground" />
+        <div className="program-grid">
+          <div className="program" style={{background: 'white', border: '1px solid var(--ink)', padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column'}}>
+            <div style={{width: '100%', height: '200px', display: 'flex', justifyContent: 'center', alignItems: 'center', borderBottom: '1px solid var(--ink)', background: 'var(--ink)'}}>
+              <Send size={80} color="var(--orange)" strokeWidth={1.5} />
+            </div>
+            <div style={{padding: '30px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+              <div>
+                <h3 style={{color: 'var(--orange)', marginBottom: '15px', fontSize: 'clamp(1.8rem, 2.5vw, 2.2rem)', lineHeight: '1.1'}}>Telegram Live Trainings</h3>
+                <p style={{fontSize: '1rem', maxWidth: '100%'}}>Daily Market update signals on your Telegram</p>
               </div>
-              <h4 className="text-2xl font-bold mb-3">Trading Signals & Tutorials</h4>
-              <p className="text-primary-foreground/80 leading-relaxed max-w-lg mb-8">
-                Get daily trading signals and step-by-step app tutorials (like Bybit). Learn how to place trades, manage risk, and understand basic market strategies to grow your portfolio.
-              </p>
+              <a href="https://t.me/yourtelegramchannel" className="round-link" style={{marginTop: '30px', width: 'fit-content'}}><span>Join Channel</span><b>→</b></a>
             </div>
-            <Link to="/membership" className="font-bold text-sm tracking-widest uppercase hover:underline">
-              Explore Signals →
-            </Link>
           </div>
-
-          {/* Psychology */}
-          <div className="bg-card text-card-foreground border border-border p-8 rounded-3xl shadow-sm hover:border-primary/30 transition-colors">
-            <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-6">
-              <BrainCircuit className="w-6 h-6 text-foreground" />
+          <div className="program" style={{background: 'white', border: '1px solid var(--ink)', padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column'}}>
+            <div style={{width: '100%', height: '200px', display: 'flex', justifyContent: 'center', alignItems: 'center', borderBottom: '1px solid var(--ink)', background: 'var(--acid)'}}>
+              <PlayCircle size={80} color="var(--orange)" strokeWidth={1.5} />
             </div>
-            <h4 className="text-xl font-bold mb-3">Mindset & Motivation</h4>
-            <p className="text-muted-foreground leading-relaxed">
-              Shola’s background as a life coach shines here. Master your mindset, stay motivated, and focus on leveling up your life financially.
-            </p>
-          </div>
-
-          {/* Community */}
-          <div className="bg-card text-card-foreground border border-border p-8 rounded-3xl shadow-sm hover:border-primary/30 transition-colors">
-            <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-6">
-              <Users className="w-6 h-6 text-foreground" />
-            </div>
-            <h4 className="text-xl font-bold mb-3">Massive Community</h4>
-            <p className="text-muted-foreground leading-relaxed">
-              Join over 109,000 active subscribers in our Telegram. Get live Q&A sessions, event updates like our Lagos Meet & Greets, and shared testimonies.
-            </p>
-          </div>
-
-          {/* Courses - Spans 2 columns */}
-          <div className="md:col-span-2 bg-secondary text-secondary-foreground border border-border p-8 rounded-3xl shadow-sm hover:border-primary/30 transition-colors flex flex-col justify-between">
-            <div>
-              <div className="w-12 h-12 rounded-xl bg-background flex items-center justify-center mb-6 shadow-sm">
-                <BookOpen className="w-6 h-6 text-foreground" />
+            <div style={{padding: '30px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+              <div>
+                <h3 style={{color: 'var(--orange)', marginBottom: '15px', fontSize: 'clamp(1.8rem, 2.5vw, 2.2rem)', lineHeight: '1.1'}}>Live Training Recordings</h3>
+                <p style={{fontSize: '1rem', maxWidth: '100%'}}>Previous learning recordings so that newbies to get a quick update</p>
               </div>
-              <h4 className="text-2xl font-bold mb-3">Broader Education & Security</h4>
-              <p className="text-muted-foreground leading-relaxed max-w-lg mb-8">
-                Moving beyond basic trading, we touch on DeFi, NFTs, and essential security practices. Navigate the evolving Nigerian crypto space safely with awareness of risk and compliance.
-              </p>
+              <Link to="/learn" className="round-link" style={{marginTop: '30px', width: 'fit-content'}}><span>Watch Now</span><b>→</b></Link>
             </div>
-            <Link to="/learn" className="font-bold text-sm tracking-widest uppercase text-primary hover:underline">
-              View Course Curriculum →
-            </Link>
           </div>
-
+          <div className="program" style={{background: 'white', border: '1px solid var(--ink)', padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column'}}>
+            <div style={{width: '100%', height: '200px', display: 'flex', justifyContent: 'center', alignItems: 'center', borderBottom: '1px solid var(--ink)', background: '#ded6c5'}}>
+              <TrendingUp size={80} color="var(--orange)" strokeWidth={1.5} />
+            </div>
+            <div style={{padding: '30px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+              <div>
+                <h3 style={{color: 'var(--orange)', marginBottom: '15px', fontSize: 'clamp(1.8rem, 2.5vw, 2.2rem)', lineHeight: '1.1'}}>Daily Signals</h3>
+                <p style={{fontSize: '1rem', maxWidth: '100%'}}>Join the VIP signaling room to 10x your capital</p>
+              </div>
+              <a href="https://t.me/yourtelegramchannel" className="round-link" style={{marginTop: '30px', width: 'fit-content'}}><span>Join Group</span><b>→</b></a>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Existing Features */}
+      <section className="programs" aria-labelledby="programs-heading">
+        <div className="section-heading">
+          <p className="eyebrow">Choose your next move</p>
+          <h2 id="programs-heading">Built for the<br />real world.</h2>
+        </div>
+        <div className="program-grid">
+          <Link className="program program-dark" to="/membership">
+            <span className="program-no">01</span>
+            <div>
+              <p className="program-kicker">Free & Premium</p>
+              <h3>Trading Signals<br /><i>& Tutorials.</i></h3>
+              <p>Get daily trading signals and step-by-step app tutorials. Learn how to place trades, manage risk, and understand basic market strategies to grow your portfolio.</p>
+            </div>
+            <span className="program-arrow">↗</span>
+          </Link>
+          <Link className="program program-yellow" to="/contact">
+            <span className="program-no">02</span>
+            <div>
+              <p className="program-kicker">Telegram Community</p>
+              <h3>Mindset &<br /><i>Motivation.</i></h3>
+              <p>Shola’s background as a life coach shines here. Master your mindset, stay motivated, and focus on leveling up your life financially with 109K+ members.</p>
+            </div>
+            <span className="program-arrow">↗</span>
+          </Link>
+          <Link className="program program-paper" to="/learn">
+            <span className="program-no">03</span>
+            <div>
+              <p className="program-kicker">Member Area</p>
+              <h3>Broader Education<br /><i>& Security.</i></h3>
+              <p>Moving beyond basic trading, we touch on DeFi, NFTs, and essential security practices. Navigate the evolving Nigerian crypto space safely.</p>
+            </div>
+            <span className="program-arrow">↗</span>
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }

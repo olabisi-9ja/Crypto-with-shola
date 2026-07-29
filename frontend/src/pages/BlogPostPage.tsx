@@ -3,7 +3,6 @@ import { useParams, Link } from 'react-router-dom';
 import { LandingNavbar } from '../components/LandingNavbar';
 import { LandingFooter } from '../components/LandingFooter';
 import { blogPosts } from '../lib/blogPosts';
-import { ArrowLeft, Calendar, Clock, BookOpen, User } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 
 export function BlogPostPage() {
@@ -12,81 +11,47 @@ export function BlogPostPage() {
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-background text-foreground font-sans flex flex-col">
+      <>
         <LandingNavbar />
-        <main className="flex-grow pt-40 pb-24 flex items-center justify-center flex-col">
-          <h1 className="text-4xl font-black mb-4">Post Not Found</h1>
-          <p className="text-muted-foreground mb-8">The article you are looking for does not exist.</p>
-          <Link to="/blog" className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-bold">
-            <ArrowLeft className="w-4 h-4" /> Back to Blog
-          </Link>
+        <main id="main">
+          <section className="intro-band" style={{background: 'var(--ink)', color: 'white'}}>
+            <h2>Post Not Found</h2>
+            <p className="band-copy">The article you are looking for does not exist.</p>
+            <Link className="round-link light" to="/blog" style={{marginTop: '30px', background: 'var(--acid)', color: 'var(--ink)'}}><span>Back to Blog</span><b style={{background: 'var(--ink)', color: 'white'}}>←</b></Link>
+          </section>
         </main>
         <LandingFooter />
-      </div>
+      </>
     );
   }
 
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans flex flex-col">
+    <>
       <LandingNavbar />
       
-      <main className="flex-grow pt-32 pb-24">
-        <article className="max-w-3xl mx-auto px-6">
-          <Link to="/blog" className="inline-flex items-center gap-2 text-sm font-bold text-muted-foreground hover:text-foreground transition-colors mb-8">
-            <ArrowLeft className="w-4 h-4" /> Back to all articles
-          </Link>
+      <main id="main">
+        <section className="intro-band" style={{background: 'var(--paper)', color: 'var(--ink)', borderBottom: '1px solid var(--line)'}}>
+          <p className="eyebrow">{post.category} / {post.date} / {post.readTime}</p>
+          <h2 style={{fontSize: 'clamp(2.5rem, 6vw, 6.5rem)'}}>{post.title}</h2>
+        </section>
+        
+        <section style={{padding: '7vw 6vw', maxWidth: '800px', margin: '0 auto'}}>
+          <Link className="text-link" to="/blog" style={{display: 'inline-block', marginBottom: '40px'}}>← Back to all articles</Link>
           
-          <div className="mb-12">
-            <div className="flex items-center gap-2 mb-6 text-xs font-bold uppercase tracking-wider text-amber-600">
-              <BookOpen className="w-4 h-4" />
-              {post.category}
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-8">
-              {post.title}
-            </h1>
-            
-            <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground border-y border-border py-6">
-              <div className="flex items-center gap-2">
-                <User className="w-4 h-4" />
-                <span className="font-medium">Shola Olusola</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                <span>{post.date}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                <span>{post.readTime}</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="prose prose-stone prose-lg max-w-none prose-headings:font-black prose-headings:tracking-tight prose-a:text-amber-600 prose-a:font-semibold hover:prose-a:text-amber-700">
+          <div className="prose prose-stone prose-lg max-w-none prose-headings:font-black prose-headings:tracking-tight prose-a:text-amber-600 prose-a:font-semibold hover:prose-a:text-amber-700" style={{fontFamily: 'var(--sans)', color: 'var(--ink)'}}>
             <ReactMarkdown>{post.content}</ReactMarkdown>
           </div>
-          
-          {/* Share / CTA section */}
-          <div className="mt-16 pt-8 border-t border-border">
-            <div className="bg-secondary rounded-3xl p-8 text-center flex flex-col items-center">
-              <h3 className="text-2xl font-bold mb-3">Ready to level up financially?</h3>
-              <p className="text-muted-foreground mb-6 max-w-lg">
-                Join our massive Telegram community to receive daily signals, lifestyle coaching, and practical tutorials directly from Shola.
-              </p>
-              <a 
-                href="https://t.me/cryptowithshola" 
-                target="_blank" 
-                rel="noreferrer"
-                className="px-8 py-4 bg-primary text-primary-foreground font-bold rounded-full hover:opacity-90 transition-opacity"
-              >
-                Join Free Telegram
-              </a>
-            </div>
-          </div>
-        </article>
+        </section>
+        
+        <section className="final-home">
+          <p className="eyebrow">Ready when you are</p>
+          <h2>Level up<br />financially.</h2>
+          <a className="round-link light" href="https://t.me/cryptowithshola" target="_blank" rel="noreferrer"><span>Join Free Telegram</span><b>→</b></a>
+          <div className="final-star">✦</div>
+        </section>
       </main>
 
       <LandingFooter />
-    </div>
+    </>
   );
 }

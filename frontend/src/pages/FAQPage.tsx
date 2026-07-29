@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { LandingNavbar } from '../components/LandingNavbar';
 import { LandingFooter } from '../components/LandingFooter';
-import { HelpCircle, ChevronDown, ChevronUp, Link as LinkIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export function FAQPage() {
@@ -19,71 +18,57 @@ export function FAQPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#faf9f6] text-[#1c1917] font-sans flex flex-col">
+    <>
       <LandingNavbar />
 
-      {/* Hero */}
-      <header className="relative w-full pt-32 pb-20 bg-stone-100 border-b border-stone-200">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <span className="inline-block text-xs font-black tracking-widest uppercase text-amber-600 mb-3">
-            FAQ
-          </span>
-          <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-6">
-            Common Questions, <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-800 font-serif italic font-normal">Honest Answers.</span>
-          </h1>
-          <p className="text-stone-700 text-lg md:text-xl font-medium leading-relaxed max-w-xl mx-auto">
-            Everything you need to know before joining the community or upgrading to a membership plan.
-          </p>
-        </div>
-      </header>
+      <main id="main">
+        {/* Header */}
+        <section className="intro-band" style={{background: 'var(--ink)', color: 'white'}}>
+          <p className="eyebrow" style={{color: 'white'}}>FAQ</p>
+          <h2 style={{color: 'white'}}>Honest<br /><span style={{color: 'var(--acid)'}}>Answers.</span></h2>
+          <p className="band-copy">Everything you need to know before joining the community or upgrading to a membership plan.</p>
+        </section>
 
-      {/* FAQ items */}
-      <section className="py-24 bg-white flex-grow">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="space-y-4">
+        {/* FAQ items */}
+        <section style={{padding: '7vw 6vw', background: 'var(--paper)', display: 'grid', gridTemplateColumns: '1fr', gap: '-1px'}}>
+          <div style={{maxWidth: '800px', margin: '0 auto', width: '100%'}}>
             {faqs.map((faq, i) => (
-              <div key={i} className="border border-stone-200 rounded-2xl overflow-hidden bg-stone-50 transition-colors hover:border-stone-300">
+              <div key={i} style={{border: '1px solid var(--ink)', marginBottom: '-1px', background: openIndex === i ? 'var(--acid)' : 'transparent', transition: 'background 0.2s'}}>
                 <button 
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                  className="w-full p-6 text-left font-bold flex justify-between items-center text-[#1c1917]"
+                  style={{width: '100%', padding: '30px', textAlign: 'left', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'none', border: 'none', cursor: 'pointer', font: 'inherit', color: 'var(--ink)'}}
                 >
-                  <span className="pr-4">{faq.q}</span>
-                  {openIndex === i ? (
-                    <ChevronUp className="w-5 h-5 text-amber-600 shrink-0" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-amber-600 shrink-0" />
-                  )}
+                  <h3 style={{fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', margin: 0, fontFamily: 'var(--display)'}}>{faq.q}</h3>
+                  <span style={{fontFamily: 'var(--mono)', fontSize: '24px'}}>{openIndex === i ? '—' : '+'}</span>
                 </button>
                 {openIndex === i && (
-                  <div className="p-6 border-t border-stone-200 text-stone-600 text-sm leading-relaxed bg-white">
-                    {faq.a}
+                  <div style={{padding: '0 30px 30px', color: 'var(--ink)'}}>
+                    <p style={{fontSize: '16px', lineHeight: 1.6, margin: 0}}>{faq.a}</p>
                   </div>
                 )}
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Support Call */}
-      <section className="py-20 bg-stone-100 text-center border-t border-stone-200">
-        <div className="max-w-xl mx-auto px-6">
-          <h2 className="text-2xl font-black mb-3">Still have questions?</h2>
-          <p className="text-stone-600 mb-8 leading-relaxed text-sm">
-            Contact us directly or explore related details. Our support team is ready to help you navigate our platform packages.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/contact" className="px-6 py-3 bg-[#1c1917] text-white rounded-full font-bold text-sm shadow-md hover:bg-stone-800 transition-colors">
-              Contact Support
+        {/* Support Call */}
+        <section className="final-home" style={{background: 'var(--orange)', color: 'var(--ink)'}}>
+          <p className="eyebrow">Still have questions?</p>
+          <h2>Contact<br />Support.</h2>
+          <p style={{maxWidth: '400px', fontSize: '17px', marginBottom: '40px', lineHeight: '1.5'}}>Contact us directly or explore related details. Our support team is ready to help you navigate our platform packages.</p>
+          
+          <div style={{display: 'flex', gap: '20px', alignItems: 'center'}}>
+            <Link to="/contact" className="round-link light" style={{background: 'var(--ink)', color: 'white'}}>
+              <span>Contact Support</span><b style={{background: 'var(--acid)', color: 'var(--ink)'}}>→</b>
             </Link>
-            <Link to="/membership" className="px-6 py-3 bg-white border border-stone-200 text-[#1c1917] rounded-full font-bold text-sm hover:bg-stone-50 transition-colors">
-              View Membership
-            </Link>
+            <Link to="/membership" className="text-link">View Membership</Link>
           </div>
-        </div>
-      </section>
+          
+          <div className="final-star" style={{color: 'var(--acid)'}}>✦</div>
+        </section>
+      </main>
 
       <LandingFooter />
-    </div>
+    </>
   );
 }

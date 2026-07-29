@@ -4,19 +4,49 @@ import { Quote } from 'lucide-react';
 export function LandingTestimonials() {
   const testimonials = [
     {
-      quote: "Shola's life coaching combined with crypto basics changed how I approach my finances. I feel empowered to level up.",
-      name: "Amara",
-      title: "Member since 2025"
+      quote: "my prediction for $BENDOG was right, thanks for the amazing lectures I really appreciate your effort.",
+      name: "Vikrom",
+      title: "@VIKROM_"
     },
     {
-      quote: "The daily Telegram signals and Bybit tutorials are exactly what a beginner needs. The community energy is unmatched.",
-      name: "Daniel",
-      title: "Member since 2023"
+      quote: "It’s been from profits to profits in the crypto space all thanks to #Cryptowithshola for the trainings and the daily signals, Bossman @itsShola thank you for hosting this.",
+      name: "Lilian Ernest",
+      title: "@LilianErnest3"
     },
     {
-      quote: "Attending the Lagos Meet & Greet in 2026 was incredible. Real testimonies, real motivation, and a real community.",
-      name: "Fatima",
-      title: "Member since 2024"
+      quote: "I am so thankful for learning crypto with #CryptoWithShola everything that I was so confused about I learned about crypto trading. @itsShola God bless you for this life time opportunity.",
+      name: "Kvng Kunta",
+      title: "@KvngKunta7"
+    },
+    {
+      quote: "It's been an amazing 3 weeks. I did not only learn how to trade. I now place trades myself and enjoy massive profits thanks to the signals being provided by @itsShola and team.",
+      name: "ThroughandThroughGooner",
+      title: "Member"
+    },
+    {
+      quote: "Defi class starts tonight with @itsShola. I did TA yesterday and today on coins and TP hit. Wow! It can only get better #CryptoWithShola made it happened",
+      name: "Your Reliable Data Vendor",
+      title: "@Re..."
+    },
+    {
+      quote: "Thanks so much @itsshola #CryptoWithShola",
+      name: "Danny",
+      title: "@ifechukwu__"
+    },
+    {
+      quote: "Enjoying the free session #CryptoWithShola",
+      name: "Prevail",
+      title: "NFT NYC 2024"
+    },
+    {
+      quote: "#cryptowithshola has been fire on fire space of gaining knowledge on a daily with more experienced tutors. Thank you @itsShola for this spaces.",
+      name: "Maney",
+      title: "@maney_02"
+    },
+    {
+      quote: "Learning so much these days and also making profits #cryptowithshola FTMUSDT ROI +117.26%",
+      name: "BOD",
+      title: "@Noteven95"
     }
   ];
 
@@ -25,43 +55,45 @@ export function LandingTestimonials() {
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Results Strip */}
-        <div className="bg-foreground text-background rounded-3xl p-8 md:p-12 mb-24 grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-background/20 text-center">
-          <div className="flex flex-col">
-            <span className="text-4xl md:text-5xl font-black mb-2">109K+</span>
-            <span className="text-background/70 text-sm">Telegram Subscribers</span>
+        <div className="bg-foreground text-background p-8 md:p-12 mb-24 grid grid-cols-2 md:grid-cols-4 gap-8 border border-border text-center">
+          <div className="flex flex-col border-r border-background/20 last:border-0">
+            <span className="text-4xl md:text-5xl font-black mb-2" style={{fontFamily: 'var(--display)'}}>109K+</span>
+            <span className="text-background/70 text-sm" style={{fontFamily: 'var(--mono)', textTransform: 'uppercase'}}>Telegram Subscribers</span>
           </div>
-          <div className="flex flex-col pl-8">
-            <span className="text-4xl md:text-5xl font-black mb-2">394K</span>
-            <span className="text-background/70 text-sm">X/Twitter Followers</span>
+          <div className="flex flex-col border-r border-background/20 last:border-0 pl-0 md:pl-8">
+            <span className="text-4xl md:text-5xl font-black mb-2" style={{fontFamily: 'var(--display)'}}>394K</span>
+            <span className="text-background/70 text-sm" style={{fontFamily: 'var(--mono)', textTransform: 'uppercase'}}>X/Twitter Followers</span>
           </div>
-          <div className="flex flex-col pl-8">
-            <span className="text-4xl md:text-5xl font-black mb-2">2022</span>
-            <span className="text-background/70 text-sm">Community Founded</span>
+          <div className="flex flex-col border-r border-background/20 last:border-0 pl-0 md:pl-8">
+            <span className="text-4xl md:text-5xl font-black mb-2" style={{fontFamily: 'var(--display)'}}>2022</span>
+            <span className="text-background/70 text-sm" style={{fontFamily: 'var(--mono)', textTransform: 'uppercase'}}>Community Founded</span>
           </div>
-          <div className="flex flex-col pl-8">
-            <span className="text-4xl md:text-5xl font-black mb-2">13.9K</span>
-            <span className="text-background/70 text-sm">Avg. Views Per Post</span>
+          <div className="flex flex-col pl-0 md:pl-8">
+            <span className="text-4xl md:text-5xl font-black mb-2" style={{fontFamily: 'var(--display)'}}>13.9K</span>
+            <span className="text-background/70 text-sm" style={{fontFamily: 'var(--mono)', textTransform: 'uppercase'}}>Avg. Views Per Post</span>
           </div>
         </div>
 
-        {/* Testimonials */}
+        {/* Testimonials Title */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4">What members say</h2>
+          <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4" style={{fontFamily: 'var(--display)'}}>Testimonies</h2>
           <p className="text-muted-foreground text-lg">
-            We ask for honest feedback — and we publish it, positive and critical.
+            Real feedback and results from our community.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Visual Testimony removed as per user request */}
+
+        <div className="grid grid-cols-1 md:grid-cols-3">
           {testimonials.map((t, i) => (
-            <div key={i} className="bg-card text-card-foreground p-8 rounded-3xl border border-border shadow-sm relative">
-              <Quote className="w-10 h-10 text-primary/10 absolute top-6 right-6" />
-              <p className="text-muted-foreground leading-relaxed mb-8 relative z-10 italic">"{t.quote}"</p>
+            <div key={i} className="bg-card text-card-foreground p-8 border border-foreground -ml-[1px] -mt-[1px] relative hover:bg-secondary transition-colors">
+              <Quote className="w-10 h-10 text-foreground/10 absolute top-6 right-6" />
+              <p className="text-foreground leading-relaxed mb-8 relative z-10 italic">"{t.quote}"</p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-secondary"></div>
+                <div className="w-12 h-12 bg-secondary border border-foreground"></div>
                 <div>
-                  <h4 className="font-bold">{t.name}</h4>
-                  <p className="text-xs text-muted-foreground">{t.title}</p>
+                  <h4 className="font-bold" style={{fontFamily: 'var(--display)'}}>{t.name}</h4>
+                  <p className="text-xs text-foreground/70" style={{fontFamily: 'var(--mono)', textTransform: 'uppercase'}}>{t.title}</p>
                 </div>
               </div>
             </div>
