@@ -2,6 +2,7 @@ import React from 'react';
 import { LandingNavbar } from '../components/LandingNavbar';
 import { LandingFooter } from '../components/LandingFooter';
 import { images } from '../lib/images';
+import { ArrowRight, Star4 } from '../components/Glyph';
 
 export function AboutPage() {
   const values = [
@@ -103,8 +104,8 @@ export function AboutPage() {
           <p className="eyebrow" style={{color: 'white'}}>Why he teaches</p>
           <h2 style={{color: 'white'}}>Discipline &<br />Education.</h2>
           <p style={{maxWidth: '400px', fontSize: '17px', marginBottom: '40px', lineHeight: '1.5'}}>The crypto space is full of promises and short on structure. Shola teaches because he believes discipline and education are the only sustainable advantages.</p>
-          <a className="round-link light" href="/contact" style={{background: 'var(--acid)', color: 'var(--ink)'}}><span>Join the community</span><b style={{background: 'var(--ink)', color: 'white'}}>→</b></a>
-          <div className="final-star" style={{color: 'var(--acid)'}}>✦</div>
+          <a className="round-link light" href="/contact" style={{background: 'var(--acid)', color: 'var(--ink)'}}><span>Join the community</span><b style={{background: 'var(--ink)', color: 'white'}}><ArrowRight /></b></a>
+          <div className="final-star" style={{color: 'var(--acid)'}}><Star4 /></div>
         </section>
       </main>
 

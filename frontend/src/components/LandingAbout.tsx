@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowUpRight } from './Glyph';
 
 export function LandingAbout() {
   return (
@@ -17,7 +18,7 @@ export function LandingAbout() {
         </p>
         <p>Babatunde "Shola" Olusola is a chemical engineer turned certified life coach and crypto mentor. Leveraging his life coaching background, Shola combines inspirational motivation with practical crypto trading tutorials.</p>
         <p>He has built a 109K+ Telegram Community and has 394K+ X Followers, empowering young people to level up financially.</p>
-        <Link className="text-link" to="/about">Learn More About Shola <span>↗</span></Link>
+        <Link className="text-link" to="/about">Learn More About Shola <span><ArrowUpRight /></span></Link>
       </div>
     </section>
   );

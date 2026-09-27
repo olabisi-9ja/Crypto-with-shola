@@ -191,7 +191,7 @@ const newGridHtml = posts.map(post => `
               <div class="tag">\${post.category}</div>
               <h3>\${post.title}</h3>
               <p>\${post.excerpt}</p>
-              <a href="\${post.id}.html">Read more →</a>
+              <a href="\${post.id}.html">Read more <svg class="glyph" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
             </div>
           </article>
 `).join('');
@@ -207,7 +207,7 @@ const mainNotesHtml = posts.slice(0,3).map((post, index) => `
             <span>0\${index + 1} / \${post.category}</span>
             <h3>\${post.title}</h3>
             <p>\${post.excerpt}</p>
-            <b>Read note →</b>
+            <b>Read note <svg class="glyph" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></b>
           </a>
 `).join('');
 

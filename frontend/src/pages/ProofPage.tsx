@@ -3,6 +3,7 @@ import { LandingNavbar } from '../components/LandingNavbar';
 import { LandingFooter } from '../components/LandingFooter';
 import { images } from '../lib/images';
 import { Link } from 'react-router-dom';
+import { ArrowRight, Check, Cross, Star4 } from '../components/Glyph';
 
 export function ProofPage() {
   const stats = [
@@ -83,10 +84,10 @@ export function ProofPage() {
               <div style={{marginTop: '20px'}}>
                 <h3>Mentorship</h3>
                 <ul style={{listStyle: 'none', padding: 0, margin: '20px 0', opacity: 0.8}}>
-                  <li style={{marginBottom: '10px'}}>✗ Random trades with no clear system</li>
-                  <li style={{marginBottom: '10px'}}>✗ No risk management limits</li>
-                  <li style={{marginBottom: '10px'}}>✗ Emotional entries and panic exits</li>
-                  <li style={{marginBottom: '10px'}}>✗ Chasing social media noise</li>
+                  <li style={{marginBottom: '10px'}}><Cross /> Random trades with no clear system</li>
+                  <li style={{marginBottom: '10px'}}><Cross /> No risk management limits</li>
+                  <li style={{marginBottom: '10px'}}><Cross /> Emotional entries and panic exits</li>
+                  <li style={{marginBottom: '10px'}}><Cross /> Chasing social media noise</li>
                 </ul>
               </div>
             </div>
@@ -96,10 +97,10 @@ export function ProofPage() {
               <div style={{marginTop: '20px'}}>
                 <h3>Mentorship</h3>
                 <ul style={{listStyle: 'none', padding: 0, margin: '20px 0'}}>
-                  <li style={{marginBottom: '10px'}}>✓ Structured daily trading routines</li>
-                  <li style={{marginBottom: '10px'}}>✓ Strict position sizing formulas</li>
-                  <li style={{marginBottom: '10px'}}>✓ Pre-planned setups and invalidations</li>
-                  <li style={{marginBottom: '10px'}}>✓ Independent technical logs</li>
+                  <li style={{marginBottom: '10px'}}><Check /> Structured daily trading routines</li>
+                  <li style={{marginBottom: '10px'}}><Check /> Strict position sizing formulas</li>
+                  <li style={{marginBottom: '10px'}}><Check /> Pre-planned setups and invalidations</li>
+                  <li style={{marginBottom: '10px'}}><Check /> Independent technical logs</li>
                 </ul>
               </div>
             </div>
@@ -113,10 +114,10 @@ export function ProofPage() {
           <p style={{maxWidth: '400px', fontSize: '17px', marginBottom: '40px', lineHeight: '1.5'}}>Unlocks full track-record lists, daily VIP setups, live chart sessions, and Discord channels.</p>
           
           <Link to="/membership" className="round-link light" style={{background: 'var(--ink)', color: 'white'}}>
-            <span>See Memberships</span><b style={{background: 'var(--acid)', color: 'var(--ink)'}}>→</b>
+            <span>See Memberships</span><b style={{background: 'var(--acid)', color: 'var(--ink)'}}><ArrowRight /></b>
           </Link>
           
-          <div className="final-star" style={{color: 'var(--acid)'}}>✦</div>
+          <div className="final-star" style={{color: 'var(--acid)'}}><Star4 /></div>
         </section>
 
       </main>

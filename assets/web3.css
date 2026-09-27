@@ -256,3 +256,6 @@
 .footer-links a:hover {
   color: #fff;
 }
+
+/* inline SVG glyphs (replace unicode arrows that iOS renders as emoji) */
+.glyph{width:1em;height:1em;display:inline-block;vertical-align:-0.125em;flex-shrink:0}

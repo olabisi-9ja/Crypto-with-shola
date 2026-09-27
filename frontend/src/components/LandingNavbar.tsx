@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, ArrowUpRight } from './Glyph';
 
 export function LandingNavbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +43,7 @@ export function LandingNavbar() {
         </nav>
         
         <div className="hidden md:block">
-          <Link className="header-cta" to="/contact">Join the community <span>↗</span></Link>
+          <Link className="header-cta" to="/contact">Join the community <span><ArrowUpRight /></span></Link>
         </div>
 
         {/* Mobile Hamburger Toggle */}
@@ -85,7 +86,7 @@ export function LandingNavbar() {
                 <span className="font-mono text-sm uppercase tracking-widest font-bold flex items-center gap-2">
                   WEB3 PORTAL <span className="text-[#ff0055]">●</span>
                 </span>
-                <span className="text-xl group-hover:translate-x-2 transition-transform">→</span>
+                <span className="text-xl group-hover:translate-x-2 transition-transform"><ArrowRight /></span>
               </Link>
               
               <Link 
@@ -94,7 +95,7 @@ export function LandingNavbar() {
                 className="mt-4 bg-transparent border-2 border-black text-black p-4 rounded-xl flex items-center justify-between hover:bg-black hover:text-white transition-colors"
               >
                 <span className="font-mono text-sm uppercase tracking-widest font-bold">Join Community</span>
-                <span className="text-xl">↗</span>
+                <span className="text-xl"><ArrowUpRight /></span>
               </Link>
             </div>
           </motion.div>

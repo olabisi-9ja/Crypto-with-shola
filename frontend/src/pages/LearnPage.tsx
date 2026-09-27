@@ -2,6 +2,7 @@ import React from 'react';
 import { LandingNavbar } from '../components/LandingNavbar';
 import { LandingFooter } from '../components/LandingFooter';
 import { BookOpen, GraduationCap, Blocks, LineChart, ArrowRightLeft, Wallet } from 'lucide-react';
+import { ArrowRight } from '../components/Glyph';
 
 export function LearnPage() {
   const lessons = [
@@ -79,7 +80,7 @@ export function LearnPage() {
                   <p>{l.desc}</p>
                 </div>
                 <button onClick={() => alert('Lesson content coming soon!')} className="round-link" style={{alignSelf: 'flex-start', marginTop: '20px', border: 'none', cursor: 'pointer', background: i % 3 === 0 ? 'var(--acid)' : 'var(--ink)', color: i % 3 === 0 ? 'var(--ink)' : 'white'}}>
-                  <span>Read Lesson</span><b style={{background: i % 3 === 0 ? 'var(--ink)' : 'var(--acid)', color: i % 3 === 0 ? 'white' : 'var(--ink)'}}>→</b>
+                  <span>Read Lesson</span><b style={{background: i % 3 === 0 ? 'var(--ink)' : 'var(--acid)', color: i % 3 === 0 ? 'white' : 'var(--ink)'}}><ArrowRight /></b>
                 </button>
               </div>
             ))}

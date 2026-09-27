@@ -4,6 +4,7 @@ import { Send, ArrowLeft } from 'lucide-react';
 import { LandingNavbar } from '../components/LandingNavbar';
 import { LandingFooter } from '../components/LandingFooter';
 import { coaches } from '../lib/coaches';
+import { ArrowRight } from '../components/Glyph';
 
 export function CoachPage() {
   const { id } = useParams<{ id: string }>();
@@ -19,7 +20,7 @@ export function CoachPage() {
         <LandingNavbar />
         <div style={{flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
           <h1 style={{fontSize: '3rem', color: 'var(--ink)'}}>Coach Not Found</h1>
-          <Link to="/" className="round-link" style={{marginTop: '20px', width: 'fit-content'}}><span>Return Home</span><b>→</b></Link>
+          <Link to="/" className="round-link" style={{marginTop: '20px', width: 'fit-content'}}><span>Return Home</span><b><ArrowRight /></b></Link>
         </div>
         <LandingFooter />
       </div>
@@ -63,7 +64,7 @@ export function CoachPage() {
             <div style={{marginTop: '60px', padding: '40px', background: 'var(--acid)', border: '2px solid var(--ink)', borderRadius: '12px'}}>
               <h2 style={{margin: '0 0 20px 0', fontSize: '2rem'}}>Want to learn directly from {coach.name}?</h2>
               <p style={{fontSize: '1.1rem', marginBottom: '30px'}}>Join our VIP community to get direct access to daily signals, live sessions, and personalized mentorship.</p>
-              <Link to="/membership" className="round-link" style={{width: 'fit-content'}}><span>Join VIP</span><b>→</b></Link>
+              <Link to="/membership" className="round-link" style={{width: 'fit-content'}}><span>Join VIP</span><b><ArrowRight /></b></Link>
             </div>
           </div>
         </div>
