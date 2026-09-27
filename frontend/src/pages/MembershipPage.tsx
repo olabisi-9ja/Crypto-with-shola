@@ -3,6 +3,7 @@ import { LandingNavbar } from '../components/LandingNavbar';
 import { LandingFooter } from '../components/LandingFooter';
 import { images } from '../lib/images';
 import { ShieldAlert } from 'lucide-react';
+import { ArrowRight, Check } from '../components/Glyph';
 
 export function MembershipPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -83,7 +84,7 @@ export function MembershipPage() {
                   <ul style={{listStyle: 'none', padding: 0, margin: '0 0 40px 0', borderTop: '1px solid var(--ink)', paddingTop: '30px'}}>
                     {t.features.map((f, idx) => (
                       <li key={idx} style={{font: '15px var(--sans)', marginBottom: '15px', display: 'flex', gap: '10px', alignItems: 'center'}}>
-                        <span style={{color: 'var(--ink)'}}>✓</span> {f}
+                        <span style={{color: 'var(--ink)'}}><Check /></span> {f}
                       </li>
                     ))}
                   </ul>
@@ -95,7 +96,7 @@ export function MembershipPage() {
                   className="round-link"
                   style={{border: 'none', background: 'var(--ink)', color: 'white', padding: '10px 10px 10px 22px', alignSelf: 'flex-start'}}
                 >
-                  <span>{t.cta}</span><b style={{background: 'var(--acid)', color: 'var(--ink)'}}>→</b>
+                  <span>{t.cta}</span><b style={{background: 'var(--acid)', color: 'var(--ink)'}}><ArrowRight /></b>
                 </a>
               </div>
             ))}

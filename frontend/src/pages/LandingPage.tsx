@@ -9,6 +9,7 @@ import { LandingNotes } from '../components/LandingNotes';
 import { LandingTestimonials } from '../components/LandingTestimonials';
 import { LandingCoaches } from '../components/LandingCoaches';
 import { LandingFooter } from '../components/LandingFooter';
+import { ArrowRight, Star4 } from '../components/Glyph';
 
 export function LandingPage() {
   return (
@@ -31,11 +32,11 @@ export function LandingPage() {
               <form onSubmit={(e) => e.preventDefault()} style={{display: 'flex', flexDirection: 'column', gap: '15px', maxWidth: '400px'}}>
                 <input type="text" placeholder="Name" style={{padding: '15px', border: '2px solid var(--ink)', background: 'white', color: 'var(--ink)'}} />
                 <input type="email" placeholder="Email" style={{padding: '15px', border: '2px solid var(--ink)', background: 'white', color: 'var(--ink)'}} />
-                <button type="submit" className="round-link" style={{background: 'var(--ink)', color: 'white', border: 'none', width: 'fit-content'}}><span>Join Now</span><b>→</b></button>
+                <button type="submit" className="round-link" style={{background: 'var(--ink)', color: 'white', border: 'none', width: 'fit-content'}}><span>Join Now</span><b><ArrowRight /></b></button>
               </form>
             </div>
           </div>
-          <div className="final-star" style={{color: 'var(--ink)'}}>✦</div>
+          <div className="final-star" style={{color: 'var(--ink)'}}><Star4 /></div>
         </section>
       </main>
       <LandingFooter />

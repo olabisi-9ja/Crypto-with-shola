@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Send, PlayCircle, TrendingUp } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from './Glyph';
 
 export function LandingFeatures() {
   return (
@@ -24,7 +25,7 @@ export function LandingFeatures() {
                 <h3 style={{color: 'var(--orange)', marginBottom: '15px', fontSize: 'clamp(1.8rem, 2.5vw, 2.2rem)', lineHeight: '1.1'}}>Telegram Live Trainings</h3>
                 <p style={{fontSize: '1rem', maxWidth: '100%'}}>Daily Market update signals on your Telegram</p>
               </div>
-              <a href="https://t.me/yourtelegramchannel" className="round-link" style={{marginTop: '30px', width: 'fit-content'}}><span>Join Channel</span><b>→</b></a>
+              <a href="https://t.me/yourtelegramchannel" className="round-link" style={{marginTop: '30px', width: 'fit-content'}}><span>Join Channel</span><b><ArrowRight /></b></a>
             </div>
           </div>
           <div className="program" style={{background: 'white', border: '1px solid var(--ink)', padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column'}}>
@@ -36,7 +37,7 @@ export function LandingFeatures() {
                 <h3 style={{color: 'var(--orange)', marginBottom: '15px', fontSize: 'clamp(1.8rem, 2.5vw, 2.2rem)', lineHeight: '1.1'}}>Live Training Recordings</h3>
                 <p style={{fontSize: '1rem', maxWidth: '100%'}}>Previous learning recordings so that newbies to get a quick update</p>
               </div>
-              <Link to="/learn" className="round-link" style={{marginTop: '30px', width: 'fit-content'}}><span>Watch Now</span><b>→</b></Link>
+              <Link to="/learn" className="round-link" style={{marginTop: '30px', width: 'fit-content'}}><span>Watch Now</span><b><ArrowRight /></b></Link>
             </div>
           </div>
           <div className="program" style={{background: 'white', border: '1px solid var(--ink)', padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column'}}>
@@ -48,7 +49,7 @@ export function LandingFeatures() {
                 <h3 style={{color: 'var(--orange)', marginBottom: '15px', fontSize: 'clamp(1.8rem, 2.5vw, 2.2rem)', lineHeight: '1.1'}}>Daily Signals</h3>
                 <p style={{fontSize: '1rem', maxWidth: '100%'}}>Join the VIP signaling room to 10x your capital</p>
               </div>
-              <a href="https://t.me/yourtelegramchannel" className="round-link" style={{marginTop: '30px', width: 'fit-content'}}><span>Join Group</span><b>→</b></a>
+              <a href="https://t.me/yourtelegramchannel" className="round-link" style={{marginTop: '30px', width: 'fit-content'}}><span>Join Group</span><b><ArrowRight /></b></a>
             </div>
           </div>
         </div>
@@ -68,7 +69,7 @@ export function LandingFeatures() {
               <h3>Trading Signals<br /><i>& Tutorials.</i></h3>
               <p>Get daily trading signals and step-by-step app tutorials. Learn how to place trades, manage risk, and understand basic market strategies to grow your portfolio.</p>
             </div>
-            <span className="program-arrow">↗</span>
+            <span className="program-arrow"><ArrowUpRight /></span>
           </Link>
           <Link className="program program-yellow" to="/contact">
             <span className="program-no">02</span>
@@ -77,7 +78,7 @@ export function LandingFeatures() {
               <h3>Mindset &<br /><i>Motivation.</i></h3>
               <p>Shola’s background as a life coach shines here. Master your mindset, stay motivated, and focus on leveling up your life financially with 109K+ members.</p>
             </div>
-            <span className="program-arrow">↗</span>
+            <span className="program-arrow"><ArrowUpRight /></span>
           </Link>
           <Link className="program program-paper" to="/learn">
             <span className="program-no">03</span>
@@ -86,7 +87,7 @@ export function LandingFeatures() {
               <h3>Broader Education<br /><i>& Security.</i></h3>
               <p>Moving beyond basic trading, we touch on DeFi, NFTs, and essential security practices. Navigate the evolving Nigerian crypto space safely.</p>
             </div>
-            <span className="program-arrow">↗</span>
+            <span className="program-arrow"><ArrowUpRight /></span>
           </Link>
         </div>
       </section>

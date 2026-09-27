@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { LandingNavbar } from '../components/LandingNavbar';
 import { LandingFooter } from '../components/LandingFooter';
 import { Link } from 'react-router-dom';
+import { ArrowRight, Star4 } from '../components/Glyph';
 
 export function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -59,12 +60,12 @@ export function FAQPage() {
           
           <div style={{display: 'flex', gap: '20px', alignItems: 'center'}}>
             <Link to="/contact" className="round-link light" style={{background: 'var(--ink)', color: 'white'}}>
-              <span>Contact Support</span><b style={{background: 'var(--acid)', color: 'var(--ink)'}}>→</b>
+              <span>Contact Support</span><b style={{background: 'var(--acid)', color: 'var(--ink)'}}><ArrowRight /></b>
             </Link>
             <Link to="/membership" className="text-link">View Membership</Link>
           </div>
           
-          <div className="final-star" style={{color: 'var(--acid)'}}>✦</div>
+          <div className="final-star" style={{color: 'var(--acid)'}}><Star4 /></div>
         </section>
       </main>
 

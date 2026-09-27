@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { images } from '../lib/images';
+import { ArrowDownRight, ArrowRight, ArrowUpRight } from './Glyph';
 
 const Typewriter = ({ words }: { words: string[] }) => {
   const [index, setIndex] = useState(0);
@@ -59,9 +60,9 @@ export function LandingHero() {
           <p className="hero-intro reveal-2">Level up financially with simple, practical crypto basics and trading tutorials. Join a massive active community led by Shola, a certified life coach turned crypto mentor.</p>
           <div className="hero-actions reveal-3">
             <a className="round-link" href="https://t.me/cryptowithshola" target="_blank" rel="noopener noreferrer">
-              <span>Join Our Free Telegram</span><b>→</b>
+              <span>Join Our Free Telegram</span><b><ArrowRight /></b>
             </a>
-            <Link className="text-link" to="/membership">See how membership works <span>↗</span></Link>
+            <Link className="text-link" to="/membership">See how membership works <span><ArrowUpRight /></span></Link>
           </div>
         </div>
       </div>
@@ -89,7 +90,7 @@ export function LandingHero() {
           <img src="/images/new_media/imgi_4_aHR0cHM6Ly9hc3NldHMuZ3Jvb3ZlYXBwcy5jb20vaW1hZ2VzLzA4YTEwNDRiLTc4NjAtNGQ0Yi04OTA1LTU4ZWJkYzM2ZGZmOC8xNzE3NDkyMjcwX3BYUTY4U09WNDAweDQwMC5qcGVn.webp" alt="Louis" style={{width: '130px', height: '130px', border: '3px solid var(--ink)', background: 'var(--paper)', borderRadius: '50%', objectFit: 'cover'}} />
         </div>
 
-        <p className="scribble reveal-3" style={{top: '-40px', right: '-20px'}}>No hype<br />just habits <span>↘</span></p>
+        <p className="scribble reveal-3" style={{top: '-40px', right: '-20px'}}>No hype<br />just habits <span><ArrowDownRight /></span></p>
       </div>
       <div className="hero-side-note reveal-3">ACTIVE SINCE 2022<br />109K+ MEMBERS</div>
     </section>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { LandingNavbar } from '../components/LandingNavbar';
 import { LandingFooter } from '../components/LandingFooter';
 import { blogPosts } from '../lib/blogPosts';
+import { ArrowRight } from '../components/Glyph';
 
 export function BlogPage() {
   return (
@@ -30,7 +31,7 @@ export function BlogPage() {
                 <span>{String(i + 1).padStart(2, '0')} / {post.category}</span>
                 <h3>{post.title}</h3>
                 <p>{post.excerpt}</p>
-                <b>Read note →</b>
+                <b>Read note <ArrowRight /></b>
               </Link>
             ))}
           </div>
