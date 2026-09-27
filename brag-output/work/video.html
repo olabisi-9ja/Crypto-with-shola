@@ -1,0 +1,210 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Syne:wght@500;600;700;800&display=block" rel="stylesheet">
+<style>
+:root{--ink:#151515;--paper:#f7f3e9;--acid:#e8ff40;--orange:#ff6339;--mono:'DM Mono',monospace;--sans:'DM Sans',sans-serif;--display:'Syne',sans-serif}
+*{box-sizing:border-box;margin:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:var(--ink)}
+.scene{position:absolute;inset:0;overflow:hidden}
+.w{display:inline-block;will-change:transform}
+.mono{font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em}
+.ser{font-family:Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.06em}
+.ticker{position:absolute;left:0;right:0;top:0;height:44px;background:var(--acid);border-bottom:1px solid var(--ink);overflow:hidden;white-space:nowrap;font:15px/44px var(--mono);letter-spacing:.08em;color:var(--ink);z-index:5}
+.ticker span{display:inline-block}
+/* s1 */
+#s1{background:var(--ink);color:#fff}
+#s1 h1{position:absolute;left:170px;top:330px;font:700 170px/.9 var(--display);letter-spacing:-.075em}
+#s1 h1 .l2{color:var(--acid);font-family:Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.07em;display:block;margin-top:10px}
+/* s2 */
+#s2{background:var(--paper);color:var(--ink)}
+.hdr{position:absolute;top:44px;left:0;right:0;height:110px;border-bottom:1px solid rgba(21,21,21,.22);display:flex;align-items:center;justify-content:space-between;padding:0 70px}
+.wordmark{font:700 30px/.82 var(--display);letter-spacing:-.08em;color:var(--orange)}
+.pill{border:1.5px solid var(--ink);border-radius:40px;padding:14px 22px;font:16px var(--mono);text-transform:uppercase}
+#s2 .copy{position:absolute;left:130px;top:290px}
+#s2 .eyebrow{font:18px var(--mono);text-transform:uppercase;letter-spacing:.08em;margin-bottom:34px}
+#s2 h1{font:700 190px/.83 var(--display);letter-spacing:-.075em}
+#s2 h1 em{font-family:Georgia,serif;font-weight:400;letter-spacing:-.09em}
+#s2 .intro{font:26px/1.45 var(--sans);max-width:620px;margin-top:44px}
+#s2 .fig{position:absolute;left:1120px;top:220px;width:640px;height:760px;background:#e3d9c5;overflow:hidden;clip-path:polygon(9% 0,100% 6%,88% 100%,0 93%)}
+#s2 .fig img{width:100%;height:100%;object-fit:cover;object-position:52% top;filter:saturate(.8) contrast(1.04)}
+#s2 .fig .cap{position:absolute;bottom:70px;left:40px;color:#fff;font:15px var(--mono);letter-spacing:.08em}
+#s2 .sun{position:absolute;left:1690px;top:170px;font:170px/1 Georgia;color:var(--orange);z-index:3}
+#s2 .scribble{position:absolute;left:830px;top:880px;font:italic 40px/1 Georgia;transform:rotate(-10deg);z-index:3}
+#s2 .scribble span{font:56px var(--sans)}
+/* s3 */
+#s3{background:var(--paper);color:var(--ink)}
+#s3 .top{position:absolute;left:110px;right:110px;top:110px;display:flex;justify-content:space-between;align-items:flex-start}
+#s3 .top h2{font:700 110px/.85 var(--display);letter-spacing:-.075em;text-align:right}
+#s3 .top h2 span{font-family:Georgia,serif;font-weight:400;font-style:italic;letter-spacing:-.08em}
+#s3 .grid{position:absolute;left:110px;right:110px;top:400px;height:580px;display:grid;grid-template-columns:1.1fr 1fr .9fr}
+.program{position:relative;padding:40px;display:flex;flex-direction:column;justify-content:space-between;border:1.5px solid var(--ink);margin-left:-1.5px}
+.program-dark{background:var(--ink);color:#fff}.program-yellow{background:var(--acid)}.program-paper{background:#ded6c5}
+.program .no,.program .kick{font:16px var(--mono);text-transform:uppercase;letter-spacing:.04em}
+.program h3{font:700 96px/.85 var(--display);letter-spacing:-.075em;margin:14px 0 22px}
+.program h3 i{font-family:Georgia,serif;font-weight:400;letter-spacing:-.09em}
+.program p.d{font:21px/1.45 var(--sans);max-width:420px}
+.program .arr{font-size:60px;align-self:flex-end;line-height:1}
+/* s4 */
+#s4{background:var(--paper);color:var(--ink)}
+#s4 .band{position:absolute;left:0;right:0;top:0;height:330px;background:linear-gradient(120deg,#151515 60%,#2a241c);color:#fff;padding:60px 160px}
+#s4 .band h1{font:700 150px/.9 var(--display);letter-spacing:-.07em}
+#s4 .band p{font:24px var(--sans);color:rgba(255,255,255,.62);margin-top:40px}
+#s4 .band .tag{position:absolute;right:160px;top:90px;background:var(--acid);color:var(--ink);border-radius:30px;padding:12px 20px;font:16px var(--mono);text-transform:uppercase;letter-spacing:.06em}
+#s4 .h{position:absolute;left:160px;top:372px;font:700 52px/1 var(--display);letter-spacing:-.06em}
+#s4 .setup{position:absolute;left:160px;right:160px;top:450px;height:230px;border:1.5px solid var(--ink);padding:34px 40px;display:grid;grid-template-columns:1fr 1fr 1fr 1.5fr;gap:30px}
+.lbl{font:600 22px var(--sans);margin-bottom:12px}
+.val{font:40px Georgia,serif}
+.red{color:#c2372a}.green{color:#1f9d57}
+.reason{font:21px/1.5 var(--sans);color:#333}
+.btn{position:absolute;left:40px;bottom:30px;background:var(--ink);color:#fff;border-radius:40px;padding:15px 26px;font:500 16px var(--mono);letter-spacing:.06em;box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.toast{position:absolute;left:250px;bottom:36px;font:16px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:#1f9d57}
+#s4 .results{position:absolute;left:160px;right:160px;top:720px;height:250px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.res{border:1.5px solid var(--ink);padding:30px 34px;position:relative;background:var(--paper)}
+.res h4{font:700 40px/1 var(--display);letter-spacing:-.06em;margin-bottom:18px}
+.res p{font:21px/1.5 var(--sans);color:#333}
+.res.loss{background:#151515;color:#fff}.res.loss p{color:rgba(255,255,255,.8)}
+.stamp{position:absolute;right:-40px;bottom:-34px;background:var(--orange);color:var(--ink);font:700 34px/1 var(--display);letter-spacing:-.05em;padding:16px 24px;border-radius:60px;border:1.5px solid var(--ink);white-space:nowrap}
+.cursor{position:absolute;width:40px;height:40px;z-index:10;left:0;top:0}
+/* s5 */
+#s5{background:var(--acid);color:var(--ink)}
+#s5 .eyebrow{position:absolute;left:180px;top:190px;font:20px var(--mono);text-transform:uppercase;letter-spacing:.08em}
+#s5 h2{position:absolute;left:170px;top:250px;font:700 250px/.8 var(--display);letter-spacing:-.075em}
+#s5 h2 em{font-family:Georgia,serif;font-weight:400;letter-spacing:-.08em}
+#s5 .star{position:absolute;left:1260px;top:420px;font:720px/1 Georgia;color:var(--orange)}
+#s5 .round{position:absolute;left:180px;top:780px;background:var(--ink);color:#fff;border-radius:100px;padding:12px 12px 12px 38px;display:flex;align-items:center;gap:36px;font:22px var(--mono);text-transform:uppercase;letter-spacing:.04em}
+#s5 .round b{display:grid;place-items:center;width:70px;height:70px;border-radius:50%;background:var(--acid);color:var(--ink);font:40px var(--sans)}
+#s5 .foot{position:absolute;left:180px;top:960px;display:flex;gap:26px;align-items:center;font:16px var(--mono);text-transform:uppercase;letter-spacing:.06em}
+#s5 .foot .wordmark{color:var(--ink);font-size:34px}
+</style></head><body>
+
+<div class="scene" id="s1">
+  <div class="ticker"><span class="tk">LEARN SLOWLY. TRADE WISELY. KEEP YOUR CAPITAL. &nbsp; ✦ &nbsp; LEARN SLOWLY. TRADE WISELY. KEEP YOUR CAPITAL. &nbsp; ✦ &nbsp; LEARN SLOWLY. TRADE WISELY. KEEP YOUR CAPITAL. &nbsp; ✦ &nbsp; LEARN SLOWLY. TRADE WISELY. KEEP YOUR CAPITAL. &nbsp; ✦ &nbsp;</span></div>
+  <h1><span class="w a">There</span> <span class="w a">is</span> <span class="w a">no</span> <span class="w a">shortcut.</span><span class="l2"><span class="w b">There</span> <span class="w b">is</span> <span class="w b">a</span> <span class="w b">process.</span></span></h1>
+</div>
+
+<div class="scene" id="s2">
+  <div class="ticker"><span class="tk">LEARN SLOWLY. TRADE WISELY. KEEP YOUR CAPITAL. &nbsp; ✦ &nbsp; LEARN SLOWLY. TRADE WISELY. KEEP YOUR CAPITAL. &nbsp; ✦ &nbsp; LEARN SLOWLY. TRADE WISELY. KEEP YOUR CAPITAL. &nbsp; ✦ &nbsp; LEARN SLOWLY. TRADE WISELY. KEEP YOUR CAPITAL. &nbsp; ✦ &nbsp;</span></div>
+  <div class="hdr"><div class="wordmark">CWS</div><div class="mono" style="font-size:16px">Crypto With Shola</div><div class="pill">Join the community ↗</div></div>
+  <div class="push">
+  <div class="copy">
+    <div class="eyebrow e2">Crypto education / for curious people</div>
+    <h1><span class="w h1a">Make sense</span><br><span class="w h1b">of the <em>market.</em></span></h1>
+    <p class="intro">A practical place to learn crypto, build disciplined trading habits, and ask better questions—without the noise.</p>
+  </div>
+  <div class="fig"><img src="shola-portrait.png"><div class="cap">SHOLA / YOUR GUIDE THROUGH THE NOISE</div></div>
+  <div class="sun">₿</div>
+  <p class="scribble">No hype<br>just habits <span>↘</span></p>
+  </div>
+</div>
+
+<div class="scene" id="s3">
+  <div class="top"><div class="mono e3" style="font-size:18px;margin-top:10px">Choose your next move</div><h2 class="h3h">Built for the<br><span>real world.</span></h2></div>
+  <div class="grid">
+    <div class="program program-dark c"><span class="no">01</span><div><p class="kick">Free lessons</p><h3>Learn the<br><i>language.</i></h3><p class="d">Wallets, market structure, chart basics, and the foundations that make everything else clearer.</p></div><span class="arr">↗</span></div>
+    <div class="program program-yellow c"><span class="no">02</span><div><p class="kick">Telegram community</p><h3>Find your<br><i>people.</i></h3><p class="d">Ask questions, catch live training updates, and learn alongside traders doing the work.</p></div><span class="arr">↗</span></div>
+    <div class="program program-paper c"><span class="no">03</span><div><p class="kick">Member area</p><h3>Go<br><i>deeper.</i></h3><p class="d">Recordings, focused learning paths, live sessions, and tools for a more intentional practice.</p></div><span class="arr">↗</span></div>
+  </div>
+</div>
+
+<div class="scene" id="s4">
+  <div class="band"><h1 class="sig">Signals</h1><p>Active setups, entry, stop loss, take profit, and market reasoning.</p><div class="tag">Members area</div></div>
+  <div class="h hA">Active setup — BTC</div>
+  <div class="setup">
+    <div><div class="lbl">Entry</div><div class="val" id="v1">$67,200</div></div>
+    <div><div class="lbl">Stop Loss</div><div class="val red" id="v2">$65,800</div></div>
+    <div><div class="lbl">Take Profit</div><div class="val green" id="v3">$71,000</div></div>
+    <div><div class="lbl">Reasoning</div><div class="reason" id="rs"></div></div>
+    <div class="btn">LOG RESULT</div>
+    <div class="toast">✓ Result logged</div>
+  </div>
+  <div class="results">
+    <div class="res r"><h4>April 15 — BTC Long</h4><p><b>Result:</b> +8.2% | <b>Duration:</b> 3 days</p></div>
+    <div class="res r loss"><h4>April 12 — ETH Short</h4><p><b>Result:</b> -2.1% (SL hit) | <b>Lesson:</b> Macro news moved faster than expected.</p><div class="stamp">We post the losses too.</div></div>
+    <div class="res r"><h4>April 08 — SOL Long</h4><p><b>Result:</b> +14.5% | <b>Duration:</b> 5 days</p></div>
+  </div>
+  <svg class="cursor" viewBox="0 0 24 24"><path d="M3 2l7 19 2.5-8L21 10z" fill="#151515" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+</div>
+
+<div class="scene" id="s5">
+  <div class="star">✦</div>
+  <div class="eyebrow e5">Ready when you are</div>
+  <h2><span class="w f">Learn the</span><br><span class="w g">long <em>game.</em></span></h2>
+  <div class="round"><span>Join the community</span><b>→</b></div>
+  <div class="foot"><span class="wordmark">CWS</span><span>Crypto With Shola · Lagos, NG</span><span style="opacity:.55">Educational content only. Not financial advice.</span></div>
+</div>
+
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const p=(t,a,b)=>cl((t-a)/(b-a));
+const eo=x=>1-Math.pow(1-x,3);
+const eback=x=>{const c=1.7;x=x-1;return 1+x*x*((c+1)*x+c)};
+const eio=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+function rise(el,k,dy=70){el.style.opacity=k;el.style.transform=`translateY(${(1-k)*dy}px)`}
+const CUTS=[0,3,7,11,15,20];
+const REASON='Macro support holding; volume increasing. Watch for resistance at $69,500.';
+function fmt(n){return '$'+Math.round(n).toLocaleString('en-US')}
+window.render=function(t){
+  // scenes: wipe up in 0.35s over previous
+  ['#s1','#s2','#s3','#s4','#s5'].forEach((id,i)=>{
+    const el=$(id), a=CUTS[i], b=CUTS[i+1];
+    const vis = t>=a-0.001 && t<b+0.4;
+    el.style.display=vis?'block':'none';
+    el.style.zIndex=i;
+    const k=i==0?1:eio(p(t,a,a+0.4));
+    el.style.clipPath=`inset(${(1-k)*100}% 0 0 0)`;
+  });
+  $$('.tk').forEach(e=>e.style.transform=`translateX(${-(t*90)%1200}px)`);
+  // s1
+  $$('#s1 .a').forEach((e,i)=>rise(e,eo(p(t,0.12+i*0.14,0.5+i*0.14)),90));
+  $$('#s1 .b').forEach((e,i)=>rise(e,eo(p(t,1.2+i*0.12,1.6+i*0.12)),90));
+  // s2
+  const t2=t-3;
+  $('#s2 .push').style.transform=`scale(${1+0.025*p(t,3,7)})`;$('#s2 .push').style.transformOrigin='40% 50%';
+  rise($('.e2'),eo(p(t2,0.3,0.7)),30);
+  rise($('.h1a'),eo(p(t2,0.35,0.8)),110);
+  rise($('.h1b'),eo(p(t2,0.55,1.0)),110);
+  rise($('#s2 .intro'),eo(p(t2,1.4,1.9)),30);
+  const fk=eo(p(t2,0.45,1.2));
+  $('#s2 .fig').style.transform=`translateX(${(1-fk)*120}px) rotate(${(1-fk)*4}deg)`;$('#s2 .fig').style.opacity=fk;
+  $('#s2 .fig img').style.transform=`scale(${1.15-0.1*fk})`;
+  const sk=eback(p(t2,1.0,1.5));
+  $('#s2 .sun').style.transform=`scale(${sk}) translateY(${Math.sin(t*1.3)*10}px) rotate(${(Math.sin(t*1.3))*8}deg)`;
+  const sc=eo(p(t2,1.6,2.1));
+  $('#s2 .scribble').style.opacity=sc;$('#s2 .scribble').style.transform=`rotate(-10deg) translateY(${(1-sc)*20}px)`;
+  // s3
+  const t3=t-7;
+  rise($('.e3'),eo(p(t3,0.3,0.7)),20);
+  rise($('.h3h'),eo(p(t3,0.3,0.8)),60);
+  $$('#s3 .c').forEach((e,i)=>{const k=eback(p(t3,0.6+i*0.3,1.15+i*0.3));e.style.opacity=cl(k*3);e.style.transform=`translateY(${(1-k)*-140}px)`;
+    e.querySelector('.arr').style.transform=`rotate(${eo(p(t3,2.3+i*0.25,2.7+i*0.25))*45}deg)`});
+  // s4
+  const t4=t-11;
+  const bk=eo(p(t4,0.3,0.8));$('.sig').style.transform=`translateY(${(1-bk)*60}px)`;$('.sig').style.opacity=bk;
+  rise($('.hA'),eo(p(t4,0.35,0.75)),30);
+  const cnt=eo(p(t4,0.5,1.2));
+  $('#v1').textContent=fmt(60000+7200*cnt);$('#v2').textContent=fmt(60000+5800*cnt);$('#v3').textContent=fmt(60000+11000*cnt);
+  const nch=Math.floor(p(t4,0.6,1.4)*REASON.length);$('#rs').textContent=REASON.slice(0,nch);
+  // cursor path to button
+  const ck=eio(p(t4,1.1,1.55));
+  const bx=160+40+80, by=450+230-30-25;
+  const cx=1500+(bx-1500)*ck, cy=1000+(by-1000)*ck - Math.sin(ck*Math.PI)*120;
+  const cur=$('.cursor');cur.style.transform=`translate(${cx}px,${cy}px)`;cur.style.opacity=cl(p(t4,1.0,1.2))*(1-p(t4,2.2,2.4));
+  const press=p(t4,1.6,1.66)-p(t4,1.72,1.82);
+  $('.btn').style.transform=`scale(${1-0.08*press})`;
+  $('.toast').style.opacity=eo(p(t4,1.75,1.95));
+  $$('#s4 .r').forEach((e,i)=>rise(e,eo(p(t4,1.8+i*0.12,2.2+i*0.12)),120));
+  const stk=eback(p(t4,2.3,2.65));$('.stamp').style.transform=`rotate(${-6+(1-stk)*-20}deg) scale(${stk})`;
+  // s5
+  const t5=t-15;
+  rise($('.e5'),eo(p(t5,0.35,0.7)),20);
+  rise($('.f'),eo(p(t5,0.35,0.8)),120);
+  rise($('.g'),eo(p(t5,0.55,1.0)),120);
+  const st=eback(p(t5,0.6,1.3));$('.star').style.transform=`scale(${st}) rotate(${(1-st)*-120+Math.sin(t*0.8)*4}deg)`;
+  rise($('.round'),eo(p(t5,1.3,1.7)),40);
+  $('.round b').style.transform=`translateX(${Math.sin(p(t5,2.2,2.8)*Math.PI)*10}px)`;
+  rise($('.foot'),eo(p(t5,1.7,2.1)),20);
+};
+window.ready=Promise.all([document.fonts.ready,...[...document.images].map(i=>i.decode())]);
+render(0);
+</script></body></html>
